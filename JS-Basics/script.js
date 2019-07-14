@@ -13,3 +13,4 @@ console.log(job);
 
 job = 'Teacher';
 console.log(job);
+console.log(firstName + lastName + fullAge);
