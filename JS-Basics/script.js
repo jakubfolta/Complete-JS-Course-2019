@@ -7,7 +7,7 @@ var age = 26;
 var fullAge = true;
 console.log(fullAge);
 
-var job;
+var job;fsd
 
 console.log(job);
 
