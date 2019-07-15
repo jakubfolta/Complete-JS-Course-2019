@@ -1,4 +1,4 @@
-/*****
+/*******************
 var firstName = 'John';
 console.log(firstName);
 
@@ -41,6 +41,7 @@ console.log('His last name is ' + lastName + '.')
 * Basic operators
 */
 
+/*
 // Math operators
 var year, yearJohn, yearMark;
 now = 2018;
@@ -66,3 +67,14 @@ console.log(typeof ageJohn);
 console.log(typeof 'John');
 var x;
 console.log(typeof x);
+*/
+
+/*************************
+* Operator precedence
+*/
+
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+var isFullAge = now - yearJohn >= fullAge;
+console.log(isFullAge);
