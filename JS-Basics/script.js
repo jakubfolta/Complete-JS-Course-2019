@@ -105,9 +105,9 @@ x--;
 * Coding Challenge
 */
 
-const markHeight = 189;
+const markHeight = 1.89;
 const markWeight = 89;
-const johnHeight = 178;
+const johnHeight = 1.78;
 const johnWeight = 69;
 
 console.log('Mark height is ' + markHeight + 'cm, and his weight is ' + markWeight + 'kg.')
@@ -115,9 +115,16 @@ console.log('Mark height is ' + markHeight + 'cm, and his weight is ' + markWeig
 console.log('John height is ' + johnHeight + 'cm, and his weight is ' + johnWeight + 'kg.')
 
 
-markBMI = markWeight / (markHeight * markHeight);
-johnBMI = johnWeight / (johnHeight * johnHeight);
+var markBMI = markWeight / (markHeight * markHeight);
+var johnBMI = johnWeight / (johnHeight * johnHeight);
 
+console.log(markBMI, johnBMI)
 compareBMI = markBMI > johnBMI;
 
-console.log('Does Mark has higher BMI than John:...... ' + compareBMI);
+//console.log('Does Mark has higher BMI than John?...... ' + compareBMI);
+
+if (markBMI > johnBMI) {
+    console.log('Mark\'s BMI is higher than John\'s.');
+} else {
+    console.log('John\'s BMI is higher than Mark\'s.');
+}
