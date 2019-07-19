@@ -36,7 +36,7 @@ if (age < 13) {
 } else if (age >= 20 && age < 30) {
     console.log(firstName + ' is a young man!')
 }
-f
+fsd
 else {
     console.log(firstName + ' is a man!')
 }
