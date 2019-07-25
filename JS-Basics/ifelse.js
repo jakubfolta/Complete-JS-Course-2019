@@ -26,8 +26,6 @@ if (isMarried) {
 */
 
 
-gsdvvdbjk
-
 
 /*
 var firstName = 'John';
