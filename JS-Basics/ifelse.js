@@ -24,7 +24,6 @@ if (isMarried) {
 /*********************
 * Boolean logic
 */
-bfdv
 
 
 /*
