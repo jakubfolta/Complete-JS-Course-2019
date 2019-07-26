@@ -25,7 +25,6 @@ if (isMarried) {
 * Boolean logic
 */
 
-
 /*
 var firstName = 'John';
 var age = 20;
