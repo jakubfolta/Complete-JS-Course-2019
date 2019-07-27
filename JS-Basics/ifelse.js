@@ -24,7 +24,7 @@ if (isMarried) {
 /*********************
 * Boolean logic
 */
-g
+gnjk
 
 /*
 var firstName = 'John';
