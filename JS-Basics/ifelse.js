@@ -26,7 +26,6 @@ if (isMarried) {
 */
 
 
-aa
 
 /*
 var firstName = 'John';
