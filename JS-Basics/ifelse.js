@@ -35,9 +35,7 @@ if (age < 13) {
     console.log(firstName + ' is a teenager!')
 } else if (age >= 20 && age < 30) {
     console.log(firstName + ' is a young man!')
-}
-
-else {
+} else {
     console.log(firstName + ' is a man!')
 }
 */
@@ -47,10 +45,10 @@ else {
 */
 
 var firstName = 'John';
-var age = 13;
+var age = 24;
 
 // Ternary operator
-age >= 16 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+age >= 24 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
 
 var drink = age >= 16 ? 'beer' : 'juice';
 console.log(firstName + ' drinks ' + drink + '.' );
@@ -64,9 +62,10 @@ if (age >= 16) {
 */
 
 // Switch statement
-var job = 'teacher'
+var job = 'cop'
 switch (job) {
     case 'teacher':
+    case 'instructor':
         console.log(firstName + ' teaches kids how to code.');
         break;
     case 'driver':
@@ -76,8 +75,62 @@ switch (job) {
         console.log(firstName + ' design houses.');
         break;
     default:
-        console.log(firstName + '')
+        console.log(firstName + ' does something else.')
 }
+
+age = 10;
+switch (true) {
+    case age < 13:
+        console.log(firstName + ' is a boy!');
+        break;
+    case 13 <= age && age < 20:
+        console.log(firstName + ' is a teenager!');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man!');
+        break;
+    default:
+        console.log(firstName + ' is a man!');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
