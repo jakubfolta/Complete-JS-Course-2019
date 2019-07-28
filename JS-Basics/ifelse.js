@@ -44,6 +44,8 @@ if (age < 13) {
 * The ternary operator and switch statements
 */
 
+/*
+
 var firstName = 'John';
 var age = 24;
 
@@ -53,13 +55,12 @@ age >= 24 ? console.log(firstName + ' drinks beer.') : console.log(firstName + '
 var drink = age >= 16 ? 'beer' : 'juice';
 console.log(firstName + ' drinks ' + drink + '.' );
 
-/*
+
 if (age >= 16) {
     var drink = 'beer';
 } else {
     var drink = 'juice';
 }
-*/
 
 // Switch statement
 var job = 'cop'
@@ -93,9 +94,24 @@ switch (true) {
         console.log(firstName + ' is a man!');
 }
 
+*/
 
+/***************************************
+* Truthy and falsy values and equality operators
+*/
 
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values
 
+var height;
+
+height = 0;
+
+if (height || height === 0) {
+    console.log('Variable is defined.');
+} else {
+    console.log('Variable is not defined.');
+}
 
 
 
