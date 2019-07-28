@@ -25,6 +25,8 @@ if (isMarried) {
 * Boolean logic
 */
 
+
+
 /*
 var firstName = 'John';
 var age = 20;
@@ -59,7 +61,6 @@ if (age >= 16) {
 } else {
     var drink = 'juice';
 }
-*/
 
 // Switch statement
 var job = 'cop'
