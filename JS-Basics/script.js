@@ -38,11 +38,12 @@ console.log('His last name is ' + lastName + '.')
 */
 
 /********************************
-* Basic operators
+ Basic operators
 */
 
 /*
 // Math operators
+
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -58,6 +59,7 @@ console.log(now / 2);
 console.log(now - 2);
 
 // Logical operators
+
 var johnOlder = ageJohn > ageMark;
 console.log(johnOlder);
 
@@ -82,6 +84,7 @@ console.log(isFullAge);
 
 
 // Grouping
+
 var ageJohn = now - yearJohn;
 var ageMark = 35;
 var average = (ageJohn + ageMark) / 2;
@@ -101,6 +104,7 @@ console.log(x);
 x++;
 x--;
 */
+
 /*************************
 * Coding Challenge
 */
@@ -121,7 +125,7 @@ var johnBMI = johnWeight / (johnHeight * johnHeight);
 console.log(markBMI, johnBMI)
 compareBMI = markBMI > johnBMI;
 
-//console.log('Does Mark has higher BMI than John?...... ' + compareBMI);
+console.log('Does Mark has higher BMI than John?...... ' + compareBMI);
 
 if (markBMI > johnBMI) {
     console.log('Mark\'s BMI is higher than John\'s.');
