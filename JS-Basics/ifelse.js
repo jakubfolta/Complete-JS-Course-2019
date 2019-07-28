@@ -126,6 +126,69 @@ if (height === 23) {
 * Coding Challenge 2
 */
 
+var johnTeamScore, johnTotalScore, mikeTeamScore, mikeTotalScore, maryTeamScore, maryTotalScore, johnAverage, mikeAverage, maryAverage, i;
+
+johnTeamScore = [89, 120, 103];
+mikeTeamScore = [116, 94, 123];
+maryTeamScore = [97, 134, 105];
+johnTotalScore = 0;
+mikeTotalScore = 0;
+maryTotalScore = 0;
+
+
+for (i in johnTeamScore) {
+    johnTotalScore += johnTeamScore[i];
+}
+
+johnAverage = johnTotalScore / johnTeamScore.length;
+console.log('John\'s team average: ' + johnAverage);
+
+for (i in mikeTeamScore) {
+    mikeTotalScore += mikeTeamScore[i];
+}
+
+mikeAverage = mikeTotalScore / mikeTeamScore.length;
+console.log('Mike\'s team average: ' + mikeAverage);
+
+for (i in maryTeamScore) {
+    maryTotalScore += maryTeamScore[i];
+}
+
+maryAverage = maryTotalScore / maryTeamScore.length;
+console.log('Mary\'s team average: ' + maryAverage);
+
+switch (true) {
+    case johnAverage > mikeAverage && johnAverage > maryAverage:
+        console.log('John has the highest average: ' + johnAverage);
+        break
+    case johnAverage > mikeAverage && johnAverage === maryAverage;
+    console.log('John and Mary have the same average of ' + johnAverage + ' and higher than Mike.');
+        break
+    case johnAverage > maryAverage && johnAverage === mikeAverage;
+    console.log('John and Mike have the same average of ' + johnAverage + ' and higher than Mary.');
+    break
+
+    case mikeAverage > johnAverage && mikeAverage > maryAverage:
+        console.log('Mike has the highest average: ' + mikeAverage);
+        break
+    case mikeAverage > johnAverage && mikeAverage === maryAverage;
+    console.log('Mike and Mary have the same average of ' + mikeAverage + ' and higher than John.');
+        break
+    case mikeAverage > maryAverage && mikeAverage === johnAverage;
+    console.log('Mike and John have the same average of ' + mikeAverage + ' and higher than Mary.');
+    break
+
+    case maryAverage > mikeAverage && johnAverage > maryAverage:
+        console.log('John has the highest average: ' + johnAverage);
+        break
+    case johnAverage > mikeAverage && johnAverage === maryAverage;
+    console.log('John and Mary have the same average of ' + johnAverage + ' and higher than Mike.');
+        break
+    case johnAverage > maryAverage && johnAverage === mikeAverage;
+    console.log('John and Mike have the same average of ' + johnAverage + ' and higher than Mary.');
+    break
+}
+
 
 
 
