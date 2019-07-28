@@ -49,6 +49,7 @@ else {
 var firstName = 'John';
 var age = 13;
 
+// Ternary operator
 age >= 16 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
 
 var drink = age >= 16 ? 'beer' : 'juice';
@@ -61,6 +62,41 @@ if (age >= 16) {
     var drink = 'juice';
 }
 */
+
+// Switch statement
+var job = 'teacher'
+switch (job) {
+    case 'teacher':
+        console.log(firstName + ' teaches kids how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in Lisbon.');
+        break;
+    case 'designer':
+        console.log(firstName + ' design houses.');
+        break;
+    default:
+        console.log(firstName + '')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
