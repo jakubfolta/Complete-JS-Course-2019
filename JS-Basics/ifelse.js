@@ -42,6 +42,45 @@ else {
 }
 */
 
-/*********************
-*
+/***************************************
+* The ternary operator and switch statements
 */
+
+var firstName = 'John';
+var age = 13;
+
+age >= 16 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+
+var drink = age >= 16 ? 'beer' : 'juice';
+console.log(firstName + ' drinks ' + drink + '.' );
+
+/*
+if (age >= 16) {
+    var drink = 'beer';
+} else {
+    var drink = 'juice';
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
