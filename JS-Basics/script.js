@@ -342,9 +342,20 @@ function calculateAge(birthYear) {
 }
 
 var ageJohn = calculateAge(1990);
-console.log(ageJohn);
+var ageMike = calculateAge(1998);
+var ageCloud = calculateAge(1976);
 
+console.log(ageJohn, ageMike, ageCloud);
 
+function calculateAgeUntilRetirement(year, name) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    console.log(name + ' will retire in ' + retirement + ' years.');
+}
+
+calculateAgeUntilRetirement(1987, 'Barret');
+calculateAgeUntilRetirement(1999, 'Tifa');
+calculateAgeUntilRetirement(1989, 'John');
 
 
 
