@@ -131,7 +131,7 @@ if (height === 23) {
 var johnTeamScore, johnTotalScore, mikeTeamScore, mikeTotalScore, maryTeamScore, maryTotalScore, johnAverage, mikeAverage, maryAverage, i;
 
 johnTeamScore = [89, 120, 108];
-mikeTeamScore = [89, 1720, 105];
+mikeTeamScore = [89, 1720, 109];
 maryTeamScore = [89, 8120, 103];
 johnTotalScore = 0;
 mikeTotalScore = 0;
@@ -141,23 +141,20 @@ maryTotalScore = 0;
 for (i in johnTeamScore) {
     johnTotalScore += johnTeamScore[i];
 }
-johnAverage = johnTotalScore / johnTeamScore.length;
-johnAverage = Math.floor(johnAverage);
+johnAverage = Math.floor(johnTotalScore / johnTeamScore.length);
 console.log('John\'s team average: ' + johnAverage);
 
 for (i in mikeTeamScore) {
     mikeTotalScore += mikeTeamScore[i];
 }
-mikeAverage = mikeTotalScore / mikeTeamScore.length;
-mikeAverage = Math.floor(mikeAverage);
+mikeAverage = Math.floor(mikeTotalScore / mikeTeamScore.length);
 console.log('Mike\'s team average: ' + mikeAverage);
 
 
 for (i in maryTeamScore) {
     maryTotalScore += maryTeamScore[i];
 }
-maryAverage = maryTotalScore / maryTeamScore.length;
-maryAverage = Math.floor(maryAverage);
+maryAverage = Math.floor(maryTotalScore / maryTeamScore.length);
 console.log('Mary\'s team average: ' + maryAverage);
 
 switch (true) {
