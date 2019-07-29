@@ -350,12 +350,16 @@ console.log(ageJohn, ageMike, ageCloud);
 function calculateAgeUntilRetirement(year, name) {
     var age = calculateAge(year);
     var retirement = 65 - age;
-    console.log(name + ' will retire in ' + retirement + ' years.');
+    if (retirement > 0) {
+        console.log(name + ' will retire in ' + retirement + ' years.');
+    } else {
+        console.log(name + ' is already retired!');
+    }
 }
 
 calculateAgeUntilRetirement(1987, 'Barret');
 calculateAgeUntilRetirement(1999, 'Tifa');
-calculateAgeUntilRetirement(1989, 'John');
+calculateAgeUntilRetirement(1951, 'John');
 
 
 
