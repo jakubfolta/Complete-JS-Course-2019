@@ -394,6 +394,7 @@ console.log(whatDoYouDo('coder', 'Tifa'));
 * Arrays
 */
 
+/*
 // Initialize new array
 var names = ['John', 'Mike', 'Tifa'];
 var years = new Array(1999, 2007, 1789);
@@ -421,9 +422,15 @@ console.log(john);
 
 
 console.log(john.indexOf(1990));
-console.log(john.indexOf(19954)); // Return '-1' if it is not in the array
+console.log(john.indexOf(19954)); // Return '-1' if it is not in the array - used for tests if some value is present in the array
 
+var isDesigner = john.indexOf('designer') === -1 ? 'John IS NOT a designer.' : 'John IS a designer.';
+console.log(isDesigner);
+*/
 
+/***************************************
+* Coding challenge 3
+*/
 
 
 
