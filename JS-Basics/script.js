@@ -337,6 +337,7 @@ switch (true) {
 * Functions
 */
 
+/*
 function calculateAge(birthYear) {
     return 2019 - birthYear;
 }
@@ -360,8 +361,38 @@ function calculateAgeUntilRetirement(year, name) {
 calculateAgeUntilRetirement(1987, 'Barret');
 calculateAgeUntilRetirement(1999, 'Tifa');
 calculateAgeUntilRetirement(1951, 'John');
+*/
 
+/***************************************
+* Functions statements and expresions
+*/
 
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function expression
+/*
+var whatDoYouDo = function(job, firstName) {
+        switch(job) {
+            case 'teacher':
+                return firstName + ' teaches kids how to code.';
+            case 'driver':
+                return firstName + ' deliver parcels.';
+            case 'designer':
+                return firstName + ' designs beautiful websites.';
+            default:
+                return firstName + ' does something else.';
+        }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Mike'));
+console.log(whatDoYouDo('coder', 'Tifa'));
+*/
+
+/***************************************
+* Arrays
+*/
 
 
 
