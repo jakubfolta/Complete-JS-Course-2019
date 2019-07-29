@@ -409,12 +409,19 @@ console.log(names);
 // Different data types
 var john = ['John', 'Smith', 1990, 'teacher', false];
 
+// Different array methods
 john.push('blue');
-john.unshift('Mr.');
-john.pop();
-john.pop();
+john.unshift('Mr.'); // Add in the beginning
 console.log(john);
 
+john.pop(); // Remove from the end
+john.pop();
+john.shift() // Remove from the start
+console.log(john);
+
+
+console.log(john.indexOf(1990));
+console.log(john.indexOf(19954)); // Return '-1' if it is not in the array
 
 
 
