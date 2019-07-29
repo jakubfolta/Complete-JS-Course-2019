@@ -152,6 +152,7 @@ mikeAverage = mikeTotalScore / mikeTeamScore.length;
 mikeAverage = Math.floor(mikeAverage);
 console.log('Mike\'s team average: ' + mikeAverage);
 
+
 for (i in maryTeamScore) {
     maryTotalScore += maryTeamScore[i];
 }
