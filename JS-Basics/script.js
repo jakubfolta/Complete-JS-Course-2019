@@ -406,7 +406,11 @@ names[1] = 'Squall';
 names[names.length] = 'Mary'
 console.log(names);
 
+// Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
 
+john.push('blue');
+console.log(john);
 
 
 
