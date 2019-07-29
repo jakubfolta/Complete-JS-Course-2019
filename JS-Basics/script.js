@@ -394,6 +394,7 @@ console.log(whatDoYouDo('coder', 'Tifa'));
 * Arrays
 */
 
+// Initialize new array
 var names = ['John', 'Mike', 'Tifa'];
 var years = new Array(1999, 2007, 1789);
 
