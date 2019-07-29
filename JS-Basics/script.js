@@ -394,7 +394,16 @@ console.log(whatDoYouDo('coder', 'Tifa'));
 * Arrays
 */
 
+var names = ['John', 'Mike', 'Tifa'];
+var years = new Array(1999, 2007, 1789);
 
+console.log(names[0]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Squall';
+names[names.length] = 'Mary'
+console.log(names);
 
 
 
