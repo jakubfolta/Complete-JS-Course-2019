@@ -109,6 +109,7 @@ x--;
 * Coding Challenge
 */
 
+/*
 const markHeight = 1.89;
 const markWeight = 89;
 const johnHeight = 1.78;
@@ -132,6 +133,8 @@ if (markBMI > johnBMI) {
 } else {
     console.log('John\'s BMI is higher than Mark\'s.');
 }
+
+*/
 
 /*********************
 * If / else statements
@@ -263,6 +266,7 @@ if (height === 23) {
 * Coding Challenge 2
 */
 
+/*
 var johnTeamScore, johnTotalScore, mikeTeamScore, mikeTotalScore, maryTeamScore, maryTotalScore, johnAverage, mikeAverage, maryAverage, i;
 
 johnTeamScore = [89, 120, 108];
@@ -326,6 +330,20 @@ switch (true) {
         console.log('John, Mary and Mike have exactly the same average of: ' + johnAverage + ' !');
         break;
 }
+
+*/
+
+/***************************************
+* Functions
+*/
+
+function calculateAge(birthYear) {
+    return 2019 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+console.log(ageJohn);
+
 
 
 
