@@ -192,8 +192,8 @@ if (age < 13) {
 }
 */
 
-/***************************************
-* The ternary operator and switch statements
+/*
+******************************************* THE TERNARY OPERATOR AND SWITCH STATEMENTS *************************************
 */
 
 /*
@@ -248,8 +248,8 @@ switch (true) {
 
 */
 
-/***************************************
-* Truthy and falsy values and equality operators
+/*
+******************************************* TRUTHY AND FALSY VALUES AND EQUALITY OPERATORS *************************************
 */
 
 // falsy values: undefined, null, 0, '', NaN
@@ -274,8 +274,8 @@ if (height === 23) {
 
 */
 
-/***************************************
-* Coding Challenge 2
+/*
+******************************************* CODING CHALLENGE 2 *************************************
 */
 
 /*
@@ -359,8 +359,8 @@ switch (true) {
 
 */
 
-/***************************************
-* Functions
+/*
+******************************************* FUNCTIONS *************************************
 */
 
 /*
@@ -389,8 +389,8 @@ calculateAgeUntilRetirement(1999, 'Tifa');
 calculateAgeUntilRetirement(1951, 'John');
 */
 
-/***************************************
-* Functions statements and expresions
+/*
+******************************************* FUNCTIONS STATEMENTS AND EXPRESSIONS *************************************
 */
 
 // Function declaration
@@ -416,8 +416,8 @@ console.log(whatDoYouDo('designer', 'Mike'));
 console.log(whatDoYouDo('coder', 'Tifa'));
 */
 
-/***************************************
-* Arrays
+/*
+******************************************* ARRAYS *************************************
 */
 
 /*
@@ -454,8 +454,8 @@ var isDesigner = john.indexOf('designer') === -1 ? 'John IS NOT a designer.' : '
 console.log(isDesigner);
 */
 
-/***************************************
-* Coding challenge 3
+/*
+******************************************* CODING CHALLENGE 3 *************************************
 */
 
 /*
