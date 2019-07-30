@@ -1,4 +1,8 @@
-/*******************
+/*
+******************************************* VARIABLES AND DATA TYPES *************************************
+*/
+
+/*
 var firstName = 'John';
 console.log(firstName);
 
@@ -16,6 +20,12 @@ job = 'Teacher';
 console.log(job);
 console.log(firstName + lastName + fullAge);
 */
+/*
+
+/*
+******************************************* VARIABLE MUTATION AND TYPE COERCION *************************************
+*/
+
 /*
 var firstName = 'John';
 var age = 27;
@@ -37,8 +47,8 @@ var lastName = prompt('What is his last name? ');
 console.log('His last name is ' + lastName + '.')
 */
 
-/********************************
- Basic operators
+/*
+******************************************* BASIC OPERATORS *************************************
 */
 
 /*
@@ -71,8 +81,8 @@ var x;
 console.log(typeof x);
 */
 
-/*************************
-* Operator precedence
+/*
+******************************************* OPERATOR PRECEDENCE *************************************
 */
 
 /*
