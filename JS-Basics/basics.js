@@ -484,6 +484,7 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
+/*
 var bills, tips, finalAmount, tipCalculator;
 
 bills = [124, 48, 268];
@@ -517,6 +518,39 @@ finalAmount.push(bills[0] + tips[0] + '$',
                  bills[2] + tips[2] + '$');
 
 console.log('Final amounts: ' + finalAmount);
+*/
+
+/*
+******************************************* OBJECTS AND PROPERTIES *************************************
+*/
+
+// Object literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    family: ['Jane', 'Bob', 'Angela'],
+    birthYear: 1987,
+    job: 'Coder'
+};
+
+console.log(john);
+var x = 'lastName';
+console.log(john[x]);
+console.log(john.family);
+console.log(john['firstName']);
+console.log(john.family[2]);
+
+john.hobby = 'games';
+john['sport'] = 'basketball';
+console.log(john);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.lastName = 'Lockhart';
+jane['birthYear'] = 1988;
+console.log(jane);
+
 
 
 
