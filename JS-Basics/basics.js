@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 ******************************************* VARIABLES AND DATA TYPES *************************************
 */
@@ -481,6 +483,32 @@ In the end, John would like to have 2 arrays:
 
 GOOD LUCK 😀
 */
+
+var bills = [124, 48, 268];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
