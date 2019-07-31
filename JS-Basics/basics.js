@@ -493,18 +493,18 @@ finalAmount = [];
 console.log('Restaurant bills: ' + bills);
 
 tipCalculator = function(amount) {
-    var tip;
+    var percentage;
 
     if (amount < 50) {
-        tip = amount * 0.2;
+        percentage = .2;
     }
     else if (amount >= 50 && amount < 200) {
-        tip = amount * 0.15;
+        percentage = .15;
     }
     else {
-        tip = amount * 0.1;
+        percentage = .1;
     }
-    return Number(tip.toFixed(2));
+    return Number((amount * percentage).toFixed(2));
 }
 tips.push(tipCalculator(bills[0]))
 tips.push(tipCalculator(bills[1]))
