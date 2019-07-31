@@ -484,7 +484,39 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
-var bills = [124, 48, 268];
+var bills, tips, finalAmount, tipCalculator;
+
+bills = [124, 48, 268];
+tips = [];
+finalAmount = [];
+
+console.log('Restaurant bills: ' + bills);
+
+tipCalculator = function(amount) {
+    var tip;
+
+    if (amount < 50) {
+        tip = amount * 0.2;
+    }
+    else if (amount >= 50 && amount < 200) {
+        tip = amount * 0.15;
+    }
+    else {
+        tip = amount * 0.1;
+    }
+    return Number(tip.toFixed(2));
+}
+tips.push(tipCalculator(bills[0]))
+tips.push(tipCalculator(bills[1]))
+tips.push(tipCalculator(bills[2]))
+
+console.log('Tips for every bill: ' + tips);
+
+finalAmount.push(bills[0] + tips[0] + '$')
+finalAmount.push(bills[1] + tips[1] + '$')
+finalAmount.push(bills[2] + tips[2] + '$')
+
+console.log('Final amounts: ' + finalAmount);
 
 
 
