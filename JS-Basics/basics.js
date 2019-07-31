@@ -506,15 +506,15 @@ tipCalculator = function(amount) {
     }
     return Number((amount * percentage).toFixed(2));
 }
-tips.push(tipCalculator(bills[0]))
-tips.push(tipCalculator(bills[1]))
-tips.push(tipCalculator(bills[2]))
+tips.push(tipCalculator(bills[0]),
+          tipCalculator(bills[1]),
+          tipCalculator(bills[2]));
 
 console.log('Tips for every bill: ' + tips);
 
-finalAmount.push(bills[0] + tips[0] + '$')
-finalAmount.push(bills[1] + tips[1] + '$')
-finalAmount.push(bills[2] + tips[2] + '$')
+finalAmount.push(bills[0] + tips[0] + '$',
+                 bills[1] + tips[1] + '$',
+                 bills[2] + tips[2] + '$');
 
 console.log('Final amounts: ' + finalAmount);
 
