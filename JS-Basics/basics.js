@@ -650,6 +650,7 @@ while (i < john.length) {
 */
 
 // Continue abd break statements
+/*
 var john = ['John', 'Smith', 1990, 'teacher', false];
 
 for (var i = 0; i < john.length; i++) {
@@ -670,55 +671,11 @@ for (var i = 1; i <= john.length; i++) {
 for (var i = john.length - 1; i >= 0; i--) {
     console.log(john[i]);
 }
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+******************************************* CODING CHALLENGE 5 *************************************
+*/
 
 /*
 Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!
@@ -744,6 +701,26 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 GOOD LUCK 😀
 */
 
+johnHoliday = {
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    finalAmount: [],
+    calcTip: function() {
+        for ( var i = 0; i < this.bills.length; i++) {
+            var percentage;
+            if (this.bills[i] < 50) {
+                percentage = .2;
+            } else if (this.bills[i] >= 50 && this.bills[i] < 200) {
+                percentage = .15;
+            } else {
+                percentage = .1
+            }
+            this.tips.push(bills[i] * percentage)
+            this.finalAmount 
+        }
+    }
+
+}
 
 
 
