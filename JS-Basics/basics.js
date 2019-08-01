@@ -625,6 +625,7 @@ console.log('John: ' + john.BMI, 'Mark: ' + mark.BMI);
 ******************************************* LOOPS AND ITERATION *************************************
 */
 
+/*
 // For loop
 for (var i = 0; i < 10; i++) {
     console.log(i);
@@ -646,6 +647,42 @@ while (i < john.length) {
     console.log(john[i]);
     i++;
 }
+*/
+
+// Continue abd break statements
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break;
+    console.log(john[i]);
+}
+
+for (var i = 1; i <= john.length; i++) {
+    console.log(john[john.length - i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
