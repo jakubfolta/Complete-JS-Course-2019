@@ -701,7 +701,7 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 GOOD LUCK 😀
 */
 
-johnHoliday = {
+var johnHoliday = {
     bills: [124, 48, 268, 180, 42],
     tips: [],
     finalAmount: [],
@@ -713,14 +713,17 @@ johnHoliday = {
             } else if (this.bills[i] >= 50 && this.bills[i] < 200) {
                 percentage = .15;
             } else {
-                percentage = .1
+                percentage = .1;
             }
-            this.tips.push(bills[i] * percentage)
-            this.finalAmount.push 
+            this.tips.push(Number((this.bills[i] * percentage).toFixed(2)));
+            this.finalAmount.push(this.bills[i] + this.tips[i]);
         }
     }
-
 }
+
+console.log(johnHoliday);
+console.log(johnHoliday.calcTip());
+console.log(johnHoliday);
 
 
 
