@@ -701,84 +701,91 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 GOOD LUCK 😀
 */
 
-var markHoliday = {
-    bills: [77, 375, 110, 45],
+var johnHoliday = {
+    bills: [124, 48, 2680, 180, 402],
     tips: [],
     finalAmount: [],
     calcTip: function() {
+
         for ( var i = 0; i < this.bills.length; i++) {
+
+            // Determine the value of percentage
             var percentage;
-            if (this.bills[i] < 100) {
+            var bill = this.bills[i];
+
+            if (bill < 50) {
                 percentage = .2;
-            } else if (this.bills[i] >= 100 && this.bills[i] < 300) {
-                percentage = .1;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = .15;
             } else {
-                percentage = .25;
+                percentage = .1;
             }
-            this.tips.push(Number((this.bills[i] * percentage).toFixed(2)));
-            this.finalAmount.push(this.bills[i] + this.tips[i]);
+            this.tips.push(Number((bill * percentage).toFixed(2)));
+            this.finalAmount.push(bill + this.tips[i]);
         }
     }
 }
 
-console.log(markHoliday);
+johnHoliday.calcTip();
+console.log(johnHoliday);
+
+var markHoliday = {
+    bills: [770, 35, 11, 45],
+    tips: [],
+    finalAmount: [],
+    calcTip: function() {
+
+        for ( var i = 0; i < this.bills.length; i++) {
+
+            // Determine the value of percentage
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 50) {
+                percentage = .2;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = .15;
+            } else {
+                percentage = .1;
+            }
+            this.tips.push(Number((bill * percentage).toFixed(2)));
+            this.finalAmount.push(bill + this.tips[i]);
+        }
+    }
+}
+
 markHoliday.calcTip();
 console.log(markHoliday);
 
 
 
-var johnHoliday = {
-    bills: [124, 48, 268, 180, 42],
-    tips: [],
-    finalAmount: [],
-    calcTip: function() {
-        for ( var i = 0; i < this.bills.length; i++) {
-            var percentage;
-            if (this.bills[i] < 50) {
-                percentage = .2;
-            } else if (this.bills[i] >= 50 && this.bills[i] < 200) {
-                percentage = .15;
-            } else {
-                percentage = .1;
-            }
-            this.tips.push(Number((this.bills[i] * percentage).toFixed(2)));
-            this.finalAmount.push(this.bills[i] + this.tips[i]);
-        }
-    }
-}
-
-console.log(johnHoliday);
-johnHoliday.calcTip();
-console.log(johnHoliday);
+// Calculate average tip
 
 var averageTipJohn = [];
 var averageTipMark = [];
-
-
 
 var calcAverageTip = function(average, tips) {
     var total = 0;
     for (var i = 0; i < tips.length; i++) {
         total += tips[i];
     }
-    return average.push(Number((total / tips.length).toFixed(2)));
+    average.push(Number((total / tips.length).toFixed(0)));
+    return average;
 }
 
 calcAverageTip(averageTipJohn, johnHoliday.tips);
-console.log('John\'s average tip: ' + averageTipJohn);
-
 calcAverageTip(averageTipMark, markHoliday.tips);
-console.log('Mark\'s average tip: ' + averageTipMark);
-console.log(averageTipJohn);
 
-if (averageTipJohn > averageTipMark) {
+console.log('John\'s average tip: ' + averageTipJohn);;
+console.log('Mark\'s average tip: ' + averageTipMark);
+
+if (averageTipJohn[0] > averageTipMark[0]) {
     console.log('John\'s average tip is higher than Mark\'s.');
-} else if (averageTipJohn < averageTipMark) {
+} else if (averageTipJohn[0] < averageTipMark[0]) {
     console.log('Mark\'s average tip is higher than John\'s.');
 } else {
-    console.log('Average tip is the same.')
+    console.log('Average tip is the same.');
 }
-
 
 
 
