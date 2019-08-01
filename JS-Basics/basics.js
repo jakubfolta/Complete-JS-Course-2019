@@ -551,6 +551,9 @@ jane.lastName = 'Lockhart';
 jane['birthYear'] = 1988;
 console.log(jane);
 
+/*
+******************************************* OBJECTS AND METHODS *************************************
+*/
 
 
 
