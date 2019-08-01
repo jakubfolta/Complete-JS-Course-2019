@@ -562,12 +562,16 @@ var john = {
     lastName: 'Smith',
     birthYear: 1989,
     family: ['Jane', 'Bob', 'Tifa', 'Cloud'],
-    job: 'teacher'
-    calcAge = function(birthYear) {
-        return 2019 - birthYear;
+    job: 'teacher',
+    calcAge: function() {
+        return 2019 - this.birthYear;
     }
 };
 
+console.log(john.calcAge()); // or pass the number
+
+var age = john.calcAge();
+john.age = age;
 
 
 
