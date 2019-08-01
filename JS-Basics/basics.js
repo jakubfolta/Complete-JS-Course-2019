@@ -625,6 +625,7 @@ console.log('John: ' + john.BMI, 'Mark: ' + mark.BMI);
 ******************************************* LOOPS AND ITERATION *************************************
 */
 
+// For loop
 for (var i = 0; i < 10; i++) {
     console.log(i);
 }
@@ -639,11 +640,26 @@ for (var i = 0; i < john.length; i++) {
     console.log(john[i]);
 }
 
+// While loop
 var i = 0;
 while (i < john.length) {
     console.log(john[i]);
     i++;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
