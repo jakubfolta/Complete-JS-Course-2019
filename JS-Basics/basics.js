@@ -570,8 +570,7 @@ var john = {
 
 console.log(john.calcAge()); // or pass the number
 
-var age = john.calcAge();
-john.age = age;
+john.age = john.calcAge();
 
 
 
