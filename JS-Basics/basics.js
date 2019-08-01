@@ -662,9 +662,15 @@ for (var i = 0; i < john.length; i++) {
     console.log(john[i]);
 }
 
+// Looping backwards
 for (var i = 1; i <= john.length; i++) {
     console.log(john[john.length - i]);
 }
+
+for (var i = john.length - 1; i >= 0; i--) {
+    console.log(john[i]);
+}
+
 
 
 
