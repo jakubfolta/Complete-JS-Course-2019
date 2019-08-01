@@ -716,7 +716,7 @@ johnHoliday = {
                 percentage = .1
             }
             this.tips.push(bills[i] * percentage)
-            this.finalAmount 
+            this.finalAmount.push 
         }
     }
 
