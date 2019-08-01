@@ -524,6 +524,7 @@ console.log('Final amounts: ' + finalAmount);
 ******************************************* OBJECTS AND PROPERTIES *************************************
 */
 
+/*
 // Object literal
 var john = {
     firstName: 'John',
@@ -550,12 +551,22 @@ jane.firstName = 'Jane';
 jane.lastName = 'Lockhart';
 jane['birthYear'] = 1988;
 console.log(jane);
+*/
 
 /*
 ******************************************* OBJECTS AND METHODS *************************************
 */
 
-
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1989,
+    family: ['Jane', 'Bob', 'Tifa', 'Cloud'],
+    job: 'teacher'
+    calcAge = function(birthYear) {
+        return 2019 - birthYear;
+    }
+};
 
 
 
