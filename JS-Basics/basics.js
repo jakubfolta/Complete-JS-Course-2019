@@ -760,28 +760,26 @@ console.log(markHoliday);
 
 
 // Calculate average tip
+var averageTipJohn = 0;
+var averageTipMark = 0;
 
-var averageTipJohn = [];
-var averageTipMark = [];
-
-var calcAverageTip = function(average, tips) {
+var calcAverageTip = function(tips) {
     var total = 0;
     for (var i = 0; i < tips.length; i++) {
         total += tips[i];
     }
-    average.push(Number((total / tips.length).toFixed(0)));
-    return average;
+    return Number((total / tips.length).toFixed(2));
 }
 
-calcAverageTip(averageTipJohn, johnHoliday.tips);
-calcAverageTip(averageTipMark, markHoliday.tips);
+averageTipJohn = calcAverageTip(johnHoliday.tips);
+averageTipMark = calcAverageTip(markHoliday.tips);
 
 console.log('John\'s average tip: ' + averageTipJohn);;
 console.log('Mark\'s average tip: ' + averageTipMark);
 
-if (averageTipJohn[0] > averageTipMark[0]) {
+if (averageTipJohn > averageTipMark) {
     console.log('John\'s average tip is higher than Mark\'s.');
-} else if (averageTipJohn[0] < averageTipMark[0]) {
+} else if (averageTipJohn < averageTipMark) {
     console.log('Mark\'s average tip is higher than John\'s.');
 } else {
     console.log('Average tip is the same.');
