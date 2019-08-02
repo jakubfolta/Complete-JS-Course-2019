@@ -726,9 +726,6 @@ var johnHoliday = {
     }
 }
 
-johnHoliday.calcTip();
-console.log(johnHoliday);
-
 var markHoliday = {
     bills: [770, 35, 11, 45],
     calcTip: function() {
@@ -754,15 +751,7 @@ var markHoliday = {
     }
 }
 
-markHoliday.calcTip();
-console.log(markHoliday);
-
-
-
 // Calculate average tip
-var averageTipJohn = 0;
-var averageTipMark = 0;
-
 var calcAverageTip = function(tips) {
     var total = 0;
     for (var i = 0; i < tips.length; i++) {
@@ -771,20 +760,24 @@ var calcAverageTip = function(tips) {
     return Number((total / tips.length).toFixed(2));
 }
 
-averageTipJohn = calcAverageTip(johnHoliday.tips);
-averageTipMark = calcAverageTip(markHoliday.tips);
+johnHoliday.calcTip();
+markHoliday.calcTip();
 
-console.log('John\'s average tip: ' + averageTipJohn);;
-console.log('Mark\'s average tip: ' + averageTipMark);
+johnHoliday.averageTip = calcAverageTip(johnHoliday.tips);
+markHoliday.averageTip = calcAverageTip(markHoliday.tips);
 
-if (averageTipJohn > averageTipMark) {
+console.log(johnHoliday);
+console.log(markHoliday);
+console.log('John\'s average tip: ' + johnHoliday.averageTip);
+console.log('Mark\'s average tip: ' + markHoliday.averageTip);
+
+if (johnHoliday.averageTip > markHoliday.averageTip) {
     console.log('John\'s average tip is higher than Mark\'s.');
-} else if (averageTipJohn < averageTipMark) {
+} else if (johnHoliday.averageTip < markHoliday.averageTip) {
     console.log('Mark\'s average tip is higher than John\'s.');
 } else {
     console.log('Average tip is the same.');
 }
-
 
 
 
