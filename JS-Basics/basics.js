@@ -703,11 +703,11 @@ GOOD LUCK 😀
 
 var johnHoliday = {
     bills: [124, 48, 2680, 180, 402],
-    tips: [],
-    finalAmount: [],
     calcTip: function() {
+        this.tips = [];
+        this.finalAmount = [];
 
-        for ( var i = 0; i < this.bills.length; i++) {
+        for (var i = 0; i < this.bills.length; i++) {
 
             // Determine the value of percentage
             var percentage;
@@ -720,8 +720,8 @@ var johnHoliday = {
             } else {
                 percentage = .1;
             }
-            this.tips.push(Number((bill * percentage).toFixed(2)));
-            this.finalAmount.push(bill + this.tips[i]);
+            this.tips[i] = Number((bill * percentage).toFixed(2));
+            this.finalAmount[i] = bill + this.tips[i];
         }
     }
 }
@@ -731,11 +731,11 @@ console.log(johnHoliday);
 
 var markHoliday = {
     bills: [770, 35, 11, 45],
-    tips: [],
-    finalAmount: [],
     calcTip: function() {
+        this.tips = [];
+        this.finalAmount = [];
 
-        for ( var i = 0; i < this.bills.length; i++) {
+        for (var i = 0; i < this.bills.length; i++) {
 
             // Determine the value of percentage
             var percentage;
@@ -748,8 +748,8 @@ var markHoliday = {
             } else {
                 percentage = .1;
             }
-            this.tips.push(Number((bill * percentage).toFixed(2)));
-            this.finalAmount.push(bill + this.tips[i]);
+            this.tips[i] = Number((bill * percentage).toFixed(2));
+            this.finalAmount[i] = bill + this.tips[i];
         }
     }
 }
