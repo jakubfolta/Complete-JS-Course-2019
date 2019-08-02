@@ -25,6 +25,7 @@ var age = 43;
 console.log(age);
 
 function foo() {
+    console.log(age); // variable is not defined yet
     var age = 67;
     console.log(age);
 }
