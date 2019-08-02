@@ -2,6 +2,7 @@
 ******************************************* Hoisting *************************************
 */
 
+/*
 // functions
 calculateAge(1987); // function hoisted as it is function declaration
 // retirement(56); // doesn't work as it is function expression
@@ -32,3 +33,48 @@ function foo() {
 
 foo();
 console.log(age);
+*/
+
+/*
+******************************************* Scoping *************************************
+*/
+
+//Scoping example
+
+var a = 'Hello! '
+first()
+
+function first() {
+    var b = 'Hi! ';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        console.log(a + b + c);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
