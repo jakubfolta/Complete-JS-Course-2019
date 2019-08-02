@@ -19,3 +19,6 @@ var retirement = function(year) {
 retirement(56);
 
 // variables
+
+var age = 43;
+console.log(age);
