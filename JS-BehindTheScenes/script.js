@@ -20,5 +20,14 @@ retirement(56);
 
 // variables
 
+console.log(age); // when runs it is undefined because js recognize this variable (knows that it exists) but it is not defined yet
 var age = 43;
+console.log(age);
+
+function foo() {
+    var age = 67;
+    console.log(age);
+}
+
+foo();
 console.log(age);
