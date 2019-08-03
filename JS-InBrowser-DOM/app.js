@@ -41,38 +41,35 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         roundScore += dice;
         currentDOM.textContent = roundScore;
     }   else {
-        document.querySelector('.dice').style.display = 'none';
-        //document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
-
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-        roundScore = 0;
-        currentDOM.textContent = 0;
-
-        //document.querySelector('.player-' + activePlayer + '-panel').classList.add('active');
-        document.querySelector('.player-0-panel').classList.toggle('active');
-        document.querySelector('.player-1-panel').classList.toggle('active');
-
+        nextPlayer();
     }
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
     // Add current score to global score
-    var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
     scores[activePlayer] += roundScore;
     document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
 
-    // Reset current score and change player
+    // Check if player won the game
+    if (scores[activePlayer] >= 20) {
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        document.querySelector('.active').classList.add('winner');
+        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.player-' + activePlayer).classList.remove('active');
+    } else {
+        // Reset current score and change player
+        nextPlayer();
+    }
+});
+
+function nextPlayer() {
+    var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
     currentDOM.textContent = 0;
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
 
-    document.querySelector('.dice').style.display = 'none';
-    document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
-
-});
-
-
+};
 
 
 
