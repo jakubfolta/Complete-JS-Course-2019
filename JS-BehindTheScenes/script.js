@@ -86,7 +86,7 @@ var john = {
     age: 26,
     calcAge: function(){ // method code happens so 'this' points to 'john' object
         console.log(this);
-        console.log(this.name);
+        console.log(this.age);
 
         function innerFunction() { // regular function code happens, that's why 'this' points to window object
             console.log(this);
@@ -96,6 +96,13 @@ var john = {
 
 john.calcAge();
 
+var mike = {
+    name: 'John',
+    age: 43,
+}
+
+mike.calcAge = john.calcAge;
+mike.calcAge();
 
 
 
