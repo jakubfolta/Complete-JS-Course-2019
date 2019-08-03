@@ -69,7 +69,13 @@ third();
 ******************************************* this keyword *************************************
 */
 
-console.log(this);
+// console.log(this);
+calcAge(1987);
+
+function calcAge(year) {
+    console.log(2019 - year);
+    console.log(this);
+}
 
 
 
