@@ -63,7 +63,15 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 });
 
 document.querySelector('.btn-new').addEventListener('click', function() {
-    
+    scores = [0, 0];
+    document.querySelector('#name-' + activePlayer).textContent = 'Player ' ;
+    document.querySelector('.player-' + activePlayer).classList.remove('active');
+    activePlayer = 0;
+    roundScore = 0;
+    document.querySelector('.player-' + activePlayer).classList.add('active');
+    document.querySelector('.active').classList.remove('winner');
+    document.querySelector('.dice').style.display = 'none';
+
 });
 
 function nextPlayer() {
