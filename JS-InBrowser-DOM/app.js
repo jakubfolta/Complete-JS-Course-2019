@@ -29,9 +29,10 @@ document.getElementById('current-1').textContent = '0';
 document.querySelector('.btn-roll').addEventListener('click', function() { // anonymous function, can be used only here inside addEventListener function
     // 1. Random number
     var dice = Math.floor(Math.random() * 6) + 1;
+    var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
+
     // 2. Display the score
     var diceDOM = document.querySelector('.dice');
-    var currentDOM = document.querySelector('#current-' + activePlayer);
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
 
@@ -55,12 +56,20 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add current score to global score
+    var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
     scores[activePlayer] += roundScore;
     document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
+
+    // Reset current score and change player
+    currentDOM.textContent = 0;
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
-    
+
 });
 
 
