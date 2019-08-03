@@ -70,6 +70,8 @@ third();
 */
 
 // console.log(this);
+
+/*
 calcAge(1987);
 
 function calcAge(year) {
@@ -77,7 +79,22 @@ function calcAge(year) {
     console.log(this);
 }
 
+*/
 
+var john = {
+    name: 'John',
+    age: 26,
+    calcAge: function(){ // method code happens so 'this' points to 'john' object
+        console.log(this);
+        console.log(this.name);
+
+        function innerFunction() { // regular function code happens, that's why 'this' points to window object
+            console.log(this);
+        }
+    }
+}
+
+john.calcAge();
 
 
 
