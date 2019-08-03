@@ -41,6 +41,7 @@ console.log(age);
 
 //Scoping example
 
+/*
 var a = 'Hello! '
 first()
 
@@ -62,8 +63,11 @@ function third() {
 }
 
 third();
+*/
 
-
+/*
+******************************************* Scoping *************************************
+*/
 
 
 
