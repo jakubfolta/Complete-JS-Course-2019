@@ -68,10 +68,41 @@ third();
 /*
 ******************************************* this keyword *************************************
 */
-fsd
 
+// console.log(this);
 
+/*
+calcAge(1987);
 
+function calcAge(year) {
+    console.log(2019 - year);
+    console.log(this);
+}
+
+*/
+
+var john = {
+    name: 'John',
+    age: 26,
+    calcAge: function(){ // method code happens so 'this' points to 'john' object
+        console.log(this);
+        console.log(this.age);
+
+        function innerFunction() { // regular function code happens, that's why 'this' points to window object
+            console.log(this);
+        }
+    }
+}
+
+john.calcAge();
+
+var mike = {
+    name: 'John',
+    age: 43,
+}
+
+mike.calcAge = john.calcAge;
+mike.calcAge();
 
 
 
