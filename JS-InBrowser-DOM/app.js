@@ -9,15 +9,14 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
-dice = Math.floor(Math.random() * 6) + 1;
 
 //document.querySelector('#current-' + activePlayer).textContent = dice;
-document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'; // setter
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'; // setter
 
 var x = document.querySelector('#current-0').textContent;  // getter
 console.log(x);
@@ -25,6 +24,11 @@ console.log(x);
 document.querySelector('.dice').style.display = 'none';
 
 document.querySelector('.btn-roll').addEventListener('click', function() { // anonymous function, can be used only here inside addEventListener function
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6) + 1;
+    // 2. Display the score
+    document.querySelector('#current-' + activePlayer).textContent = dice;
+    // 3. Update the score only if rolled number was not one
 
 });
 
