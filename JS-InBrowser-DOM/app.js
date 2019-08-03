@@ -62,6 +62,10 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
+document.querySelector('.btn-new').addEventListener('click', function() {
+    
+});
+
 function nextPlayer() {
     var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
     currentDOM.textContent = 0;
