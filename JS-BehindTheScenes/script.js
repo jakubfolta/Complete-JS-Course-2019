@@ -51,9 +51,17 @@ function first() {
     function second() {
         var c = 'Hey!';
         console.log(a + b + c);
+        third();
     }
 }
 
+function third() {
+    var d = 'Heyya!';
+    // console.log(c); // 'c' is not in the same scope chain, cannot access it
+    console.log(a + d);
+}
+
+third();
 
 
 
