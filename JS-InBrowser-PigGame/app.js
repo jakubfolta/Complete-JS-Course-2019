@@ -22,7 +22,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         // 2. Display the score
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
-        diceDOM.src = 'JS-InBrowser-DOM/dice-' + dice + '.png';
+        diceDOM.src = 'JS-InBrowser-PigGame/dice-' + dice + '.png';
 
         // 3. Update the score only if rolled number was not one
         if (dice !== 1) {
