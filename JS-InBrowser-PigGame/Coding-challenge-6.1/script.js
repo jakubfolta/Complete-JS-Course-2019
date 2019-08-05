@@ -17,14 +17,12 @@ Change the game to follow these rules:
 */
 
 
-var scores, roundScore, activePlayer, gamePlaying, twiceSix, turn, maxPoints, prevScore;
+var scores, roundScore, activePlayer, gamePlaying, maxPoints, prevScore;
 
-var start = {
+var app = {
     init: function() {
         scores = [0, 0];
         roundScore = 0;
-        twiceSix = 0;
-        turn = 0;
         activePlayer = 0;
         gamePlaying = true;
         maxPoints = 100;
@@ -44,16 +42,19 @@ var start = {
         document.getElementById('current-1').textContent = '0';
         document.getElementById('name-0').textContent = 'Player 1';
         document.getElementById('name-1').textContent = 'Player 2';
+    },
+    restart: function() {
+        return 0;
     }
 };
 
-start.init();
+app.init();
 
 document.querySelector('.btn-roll').addEventListener('click', function() { // anonymous function, can be used only here inside addEventListener function
     if (gamePlaying) {
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
-        var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
+        var currentDOM = document.querySelector('#current-' + activePlayer);
         console.log(dice, prevScore);
 
         // 2. Display the score
@@ -64,16 +65,20 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         // 3. Update the score only if rolled number was not one
         switch(true) {
             case dice === 1:
+                prevScore = dice;
                 nextPlayer();
                 break;
-            case dice === 6 && prevScore === 6: //turn === 2 && twiceSix === 12:
+            case dice === 6 && prevScore === 6:
+                scores[activePlayer] = app.restart();
+                document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
+                prevScore = app.restart();
                 nextPlayer();
                 break;
             case dice !== 1:
                 roundScore += dice;
+                prevScore = dice;
                 currentDOM.textContent = roundScore;
         }
-        prevScore = dice;
     }
 });
 
@@ -97,15 +102,13 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
-document.querySelector('.btn-new').addEventListener('click', start.init);
+document.querySelector('.btn-new').addEventListener('click', app.init);
 
 function nextPlayer() {
-    var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
+    var currentDOM = document.querySelector('#current-' + activePlayer);
     currentDOM.textContent = 0;
+    roundScore = app.restart();
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-    roundScore = 0;
-    twiceSix = 0;
-    turn = 0;
 
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
