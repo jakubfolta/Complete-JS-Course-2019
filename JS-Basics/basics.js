@@ -247,7 +247,7 @@ age = 10;
 switch (true) {
     case age < 13:
         console.log(firstName + ' is a boy!');
-        break;
+        break; // if 'break' is omited the next case is executed even if the evaluation does not match the case
     case 13 <= age && age < 20:
         console.log(firstName + ' is a teenager!');
         break;
