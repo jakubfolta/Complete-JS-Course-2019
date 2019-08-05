@@ -26,8 +26,13 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
         var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
-        turn += 1;
-        console.log(turn);
+
+        // Check player turn and keep only two turns all the time
+        turn === 2 ? turn = 1 : turn += 1;
+
+        if (dice === 6) {
+            twiceSix += dice;
+        }
         // 2. Display the score
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
@@ -37,13 +42,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         switch(true) {
             case dice === 1:
                 nextPlayer();
+                break;
             case dice === 6 && turn === 2 && twiceSix === 12:
                 console.log(twiceSix);
                 nextPlayer();
                 break;
-            case dice === 6:
-                twiceSix += dice;
-                console.log(twiceSix);
             case dice !== 1:
                 roundScore += dice;
                 currentDOM.textContent = roundScore;
