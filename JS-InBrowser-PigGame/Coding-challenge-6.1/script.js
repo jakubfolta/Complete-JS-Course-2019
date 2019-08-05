@@ -17,7 +17,7 @@ Change the game to follow these rules:
 */
 
 
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, twiceSix;
 
 init();
 
@@ -33,6 +33,13 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         diceDOM.src = '../dice-' + dice + '.png';
 
         // 3. Update the score only if rolled number was not one
+        switch(dice) {
+            case dice !== 1:
+                roundScore += dice;
+                currentDOM.textContent = roundScore;
+            case dice
+        }
+
         if (dice !== 1) {
             roundScore += dice;
             currentDOM.textContent = roundScore;
