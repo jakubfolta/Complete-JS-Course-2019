@@ -17,7 +17,7 @@ Change the game to follow these rules:
 */
 
 
-var scores, roundScore, activePlayer, gamePlaying, twiceSix;
+var scores, roundScore, activePlayer, gamePlaying, twiceSix, turn;
 
 init();
 
@@ -26,7 +26,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
         var currentDOM = currentDOM = document.querySelector('#current-' + activePlayer);
-
+        turn += 1;
+        console.log(turn);
         // 2. Display the score
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
@@ -34,17 +35,19 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
 
         // 3. Update the score only if rolled number was not one
         switch(true) {
+            case dice === 1:
+                nextPlayer();
+            case dice === 6 && turn === 2 && twiceSix === 12:
+                console.log(twiceSix);
+                nextPlayer();
+                break;
+            case dice === 6:
+                twiceSix += dice;
+                console.log(twiceSix);
             case dice !== 1:
                 roundScore += dice;
                 currentDOM.textContent = roundScore;
                 console.log(roundScore);
-            case dice === 6:
-                twiceSix += dice;
-                console.log(roundScore);
-                console.log(twiceSix);
-                break
-            case dice === 1:
-                nextPlayer();
         }
 /*
         if (dice !== 1) {
@@ -85,6 +88,7 @@ function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
     twiceSix = 0;
+    turn = 0;
 
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
@@ -95,6 +99,7 @@ function init() {
     scores = [0, 0];
     roundScore = 0;
     twiceSix = 0;
+    turn = 0;
     activePlayer = 0;
     gamePlaying = true;
 
