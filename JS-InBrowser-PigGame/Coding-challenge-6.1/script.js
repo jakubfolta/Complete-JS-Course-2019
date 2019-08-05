@@ -84,6 +84,7 @@ function nextPlayer() {
     currentDOM.textContent = 0;
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
+    twiceSix = 0;
 
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
@@ -93,6 +94,7 @@ function nextPlayer() {
 function init() {
     scores = [0, 0];
     roundScore = 0;
+    twiceSix = 0;
     activePlayer = 0;
     gamePlaying = true;
 
