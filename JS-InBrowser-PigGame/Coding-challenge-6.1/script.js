@@ -19,6 +19,7 @@ Change the game to follow these rules:
 
 var scores, roundScore, activePlayer, gamePlaying, maxPoints, prevScore;
 
+
 var app = {
     init: function() {
         scores = [0, 0];
@@ -48,8 +49,11 @@ var app = {
     }
 };
 
+
+// INITIALIZE GAME
 app.init();
 
+// ROLL BUTTON
 document.querySelector('.btn-roll').addEventListener('click', function() { // anonymous function, can be used only here inside addEventListener function
     if (gamePlaying) {
         // 1. Random number
@@ -82,6 +86,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
     }
 });
 
+// HOLD BUTTON
 document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gamePlaying) {
         // Add current score to global score
@@ -97,12 +102,15 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             gamePlaying = false;
         } else {
             // Reset current score and change player
+            prevScore = app.restart();
             nextPlayer();
         }
     }
 });
 
+// NEW GAME BUTTON
 document.querySelector('.btn-new').addEventListener('click', app.init);
+
 
 function nextPlayer() {
     var currentDOM = document.querySelector('#current-' + activePlayer);
@@ -114,6 +122,9 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 };
+
+
+
 
 
 
