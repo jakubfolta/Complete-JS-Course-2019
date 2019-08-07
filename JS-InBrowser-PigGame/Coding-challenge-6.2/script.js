@@ -25,8 +25,7 @@ var app = {
         scores = [0, 0];
         roundScore = 0;
         activePlayer = 0;
-        gamePlaying = true;
-        maxPoints = 100;
+        gamePlaying = false;
         prevScore = 0;
 
         document.querySelector('.player-0-panel').classList.remove('winner');
@@ -35,8 +34,11 @@ var app = {
         document.querySelector('.player-0-panel').classList.add('active');
         document.querySelector('.player-1-panel').classList.remove('active');
 
-        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.set-goal').classList.remove('hidden');
+        document.querySelector('.btn-submit').classList.remove('hidden');
+        document.querySelector('.dice').classList.toggle('hidden');
 
+        document.getElementById('input-score').value = '?';
         document.getElementById('score-0').textContent = '0';
         document.getElementById('score-1').textContent = '0';
         document.getElementById('current-0').textContent = '0';
@@ -108,8 +110,27 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
+
+// SET SCORE
+document.querySelector('.btn-submit').addEventListener('click', function() {
+    if (isNaN(document.getElementById('input-score').value)) {
+        alert('Enter a number!');
+    } else {
+        gamePlaying = true;
+        maxPoints = document.getElementById('input-score').value;
+        document.querySelector('.set-goal').classList.toggle('hidden');
+        document.querySelector('.btn-submit').classList.toggle('hidden');
+        console.log(maxPoints);
+    }
+});
+
+
 // NEW GAME BUTTON
-document.querySelector('.btn-new').addEventListener('click', app.init);
+document.querySelector('.btn-new').addEventListener('click', function() {
+    if (scores[activePlayer] >= maxPoints) {
+        app.init();
+    }
+});
 
 
 function nextPlayer() {

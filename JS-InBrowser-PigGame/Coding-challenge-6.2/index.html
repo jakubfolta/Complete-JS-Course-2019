@@ -11,13 +11,16 @@
 
     <body>
         <div class="wrapper clearfix">
+
             <div class="set-goal">
                 <form class="goal-form">
                     Enter max score<br>
-                    <input class="input-score" type="text" name="max-score"><br>
-                    <input type="submit" value="Submit">
+                    <input class="text-input" id="input-score" type="text" onfocus="this.value= ''"><br>
                 </form>
             </div>
+
+            <div class="rules-box" id="rules"></div>
+
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
                 <div class="player-score" id="score-0">43</div>
@@ -39,9 +42,11 @@
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="btn-submit">Submit</button>
 
             <img src="dice-5.png" alt="Dice" class="dice">
         </div>
+        <button class="btn-rules"><i class="ion-ios-paper"></i>Rules</button>
 
         <script src="script.js"></script>
     </body>
