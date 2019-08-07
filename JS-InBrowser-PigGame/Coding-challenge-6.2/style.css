@@ -213,12 +213,17 @@ i {
     transform: translate(-50%, -50%);
 }
 
+.rules-header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
 
 .rules-title {
     text-align: center;
     font-size: 2em;
     font-weight: 600;
-    flex-grow: 6;
+    flex-grow: 3;
 }
 
 .rules-text {
