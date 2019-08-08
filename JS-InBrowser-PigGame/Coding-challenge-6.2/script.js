@@ -133,6 +133,18 @@ document.querySelector('.btn-new').addEventListener('click', function() {
 });
 
 
+// RULES BUTTON
+document.querySelector('.btn-rules').addEventListener('click', function() {
+    document.querySelector('.rules-box').classList.toggle('hidden');
+});
+
+
+// RULES CLOSE BUTTON
+document.querySelector('.btn-close-rules').addEventListener('click', function() {
+    document.querySelector('.rules-box').classList.toggle('hidden');
+});
+
+
 function nextPlayer() {
     var currentDOM = document.querySelector('#current-' + activePlayer);
     currentDOM.textContent = 0;
