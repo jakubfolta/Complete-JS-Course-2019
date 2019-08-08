@@ -137,9 +137,26 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-new {top: 45px;}
+.btn-roll {top: 403px;}
+.btn-hold {top: 467px;}
+.btn-submit {
+    top: 180px;
+    background-color: hsl(3, 5%, 63%);
+    border-radius: 7px;
+    width: 15%;
+    font-weight: 800;
+    font-size: 22px;
+}
+.btn-rules {
+    top: 20px;
+    color: hsl(5, 100%, 0%);
+    font-size: 32px;
+}
+
+.btn-rules i {
+    font-size: 45px;
+}
 
 .dice {
     position: absolute;
@@ -148,6 +165,86 @@ i {
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.set-goal {
+    position: absolute;
+    font-size: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-input {
+    width: 15%;
+    border: 2px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0px 0px 30px hsl(0, 100%, 61%);
+}
+
+.rules-box {
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    width: 70%;
+    background-color: #000;
+    height: 520px;
+    border: 4px solid hsl(217, 90%, 61%);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 60px hsl(249, 62%, 51%);
+}
+
+.rules-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-close-rules {
+    position: static;
+    border: 1px solid hsl(249, 62%, 51%);
+    border-radius: 7px;
+    transform: none;
+    width: 100px;
+    color: hsl(357, 96%, 48%);
+    font-weight: 700;
+    margin-bottom: auto;
+}
+
+.rules-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    flex-grow: 1;
+    padding-left: 90px;
+}
+
+
+.rules-text {
+    font-size: 1.5em;
+    line-height: 2rem;
+    padding-bottom: 2em;
+}
+
+.hidden {
+    display: none;
 }
 
 .winner { background-color: #f7f7f7; }
