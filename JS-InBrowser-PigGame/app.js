@@ -61,8 +61,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
         var secondDiceDOM = document.querySelector('.second-dice');
         diceDOM.style.display = 'block';
         secondDiceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
-        secondDiceDOM.src = 'dice-' + secondDice + '.png';
+        diceDOM.src = 'JS-InBrowser-PigGame/dice-' + dice + '.png';
+        secondDiceDOM.src = 'JS-InBrowser-PigGame/dice-' + secondDice + '.png';
 
         // 3. Update the score only if rolled number was not one
         switch(true) {
