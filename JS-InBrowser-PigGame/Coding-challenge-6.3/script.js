@@ -36,7 +36,6 @@ var app = {
 
         document.querySelector('.set-goal').classList.remove('hidden');
         document.querySelector('.btn-submit').classList.remove('hidden');
-        document.querySelector('.dice').classList.toggle('hidden');
 
         document.getElementById('input-score').value = '?';
         document.getElementById('score-0').textContent = '0';
@@ -126,11 +125,7 @@ document.querySelector('.btn-submit').addEventListener('click', function() {
 
 
 // NEW GAME BUTTON
-document.querySelector('.btn-new').addEventListener('click', function() {
-    if (scores[activePlayer] >= maxPoints) {
-        app.init();
-    }
-});
+document.querySelector('.btn-new').addEventListener('click', app.init);
 
 
 // RULES BUTTON
