@@ -11,7 +11,7 @@
 - The first player to reach 100 points on GLOBAL score wins the game
 
 ## Pig Game
-![Pig Game](./images/piggame.png)
+![Pig Game](./JS-InBrowser-PigGame/images/piggame.png)
 
 ## Technologies
 * HTML5, CSS3, JavaScript
