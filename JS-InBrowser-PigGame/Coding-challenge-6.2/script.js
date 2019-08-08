@@ -113,8 +113,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 // SET SCORE
 document.querySelector('.btn-submit').addEventListener('click', function() {
-    if (isNaN(document.getElementById('input-score').value)) {
-        alert('Enter a number!');
+    if (isNaN(document.getElementById('input-score').value) || document.getElementById('input-score').value === '0') {
+        alert('Enter a number bigger than "0" !');
     } else {
         gamePlaying = true;
         maxPoints = document.getElementById('input-score').value;
