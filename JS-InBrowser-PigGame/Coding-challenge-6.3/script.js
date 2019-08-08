@@ -59,18 +59,22 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
     if (gamePlaying) {
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
+        var secondDice = Math.floor(Math.random() * 6) + 1;
         var currentDOM = document.querySelector('#current-' + activePlayer);
-        console.log(dice, prevScore);
+        console.log(dice, secondDice, prevScore);
 
         // 2. Display the score
         var diceDOM = document.querySelector('.dice');
+        var secondDiceDOM = document.querySelector('.second-dice');
         diceDOM.style.display = 'block';
+        secondDiceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
+        secondDiceDOM.src = 'dice-' + secondDice + '.png';
 
         // 3. Update the score only if rolled number was not one
         switch(true) {
-            case dice === 1:
-                prevScore = dice;
+            case dice === 1 || secondDice === 1:
+                prevScore = secondDice;
                 nextPlayer();
                 break;
             case dice === 6 && prevScore === 6:
@@ -79,9 +83,9 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
                 prevScore = app.restart();
                 nextPlayer();
                 break;
-            case dice !== 1:
-                roundScore += dice;
-                prevScore = dice;
+            case dice !== 1 && secondDice !== 1:
+                roundScore += dice + secondDice;
+                prevScore = secondDice;
                 currentDOM.textContent = roundScore;
         }
     }
@@ -99,6 +103,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.active').classList.add('winner');
             document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.second-dice').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
         } else {
@@ -147,6 +152,7 @@ function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.second-dice').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 };
