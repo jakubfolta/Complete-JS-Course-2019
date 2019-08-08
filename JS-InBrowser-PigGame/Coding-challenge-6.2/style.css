@@ -154,9 +154,6 @@ i {
     font-size: 32px;
     font-weight: 800;
 }
-.btn-close-rules {
-    flex-grow: 1;
-}
 
 .btn-rules i {
     font-size: 45px;
@@ -197,7 +194,6 @@ i {
 .rules-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     z-index: 9;
     width: 70%;
     background-color: #000;
@@ -211,20 +207,35 @@ i {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 60px hsl(249, 62%, 51%);
 }
 
 .rules-header {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: stretch;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-close-rules {
+    position: static;
+    border: 1px solid hsl(249, 62%, 51%);
+    border-radius: 7px;
+    transform: none;
+    width: 100px;
+    color: hsl(357, 96%, 48%);
+    font-weight: 700;
+    margin-bottom: auto;
 }
 
 .rules-title {
     text-align: center;
     font-size: 2em;
     font-weight: 600;
-    flex-grow: 3;
+    flex-grow: 1;
+    padding-left: 90px;
 }
+
 
 .rules-text {
     font-size: 1.5em;
