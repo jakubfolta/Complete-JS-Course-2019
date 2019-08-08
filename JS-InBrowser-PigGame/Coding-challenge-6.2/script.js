@@ -113,8 +113,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 // SET SCORE
 document.querySelector('.btn-submit').addEventListener('click', function() {
-    if (isNaN(document.getElementById('input-score').value)) {
-        alert('Enter a number!');
+    if (isNaN(document.getElementById('input-score').value) || document.getElementById('input-score').value === '0') {
+        alert('Enter a number bigger than "0" !');
     } else {
         gamePlaying = true;
         maxPoints = document.getElementById('input-score').value;
@@ -130,6 +130,18 @@ document.querySelector('.btn-new').addEventListener('click', function() {
     if (scores[activePlayer] >= maxPoints) {
         app.init();
     }
+});
+
+
+// RULES BUTTON
+document.querySelector('.btn-rules').addEventListener('click', function() {
+    document.querySelector('.rules-box').classList.toggle('hidden');
+});
+
+
+// RULES CLOSE BUTTON
+document.querySelector('.btn-close-rules').addEventListener('click', function() {
+    document.querySelector('.rules-box').classList.toggle('hidden');
 });
 
 
