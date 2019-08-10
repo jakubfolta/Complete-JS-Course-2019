@@ -2,6 +2,7 @@
 ******************************************* Function constructor *************************************
 */
 
+/*
 var john = {
     name: 'John',
     yearOfBirth: '1987',
@@ -53,10 +54,26 @@ console.log(cloud.lastName);
 
 
 barret.calcAge(1985);
+*/
 
 
+/*
+******************************************* Object.create *************************************
+*/
 
+var avalancheProto = {
+    calcAge: function() {
+        console.log(2019 - this.birthYear);
+    }
+};
 
+var cloud = Object.create(avalancheProto);
+
+console.log(cloud);
+
+cloud.name = 'Cloud';
+cloud.birthYear = 1987;
+cloud.job = 'Soldier';
 
 
 
