@@ -61,12 +61,16 @@ barret.calcAge(1985);
 ******************************************* Object.create *************************************
 */
 
+
+/*
+// create prototype object
 var avalancheProto = {
     calcAge: function() {
         console.log(2019 - this.birthYear);
     }
 };
 
+// inheritance
 var cloud = Object.create(avalancheProto);
 
 console.log(cloud);
@@ -74,6 +78,37 @@ console.log(cloud);
 cloud.name = 'Cloud';
 cloud.birthYear = 1987;
 cloud.job = 'Soldier';
+
+// add second parameter to 'Object.create'
+var tifa = Object.create(avalancheProto, {
+    name: {value: 'Tifa'},
+    birthYear: {value: 1993},
+    job:  {value: 'Avalanche member'}
+});
+*/
+
+
+/*
+******************************************* Primitives vs objects *************************************
+*/
+
+
+var a = 23;
+var b = a;
+a = 45;
+
+console.log(a, b);
+
+var obj1 = {
+    name: 'John',
+    age: 23
+};
+var obj2 = obj1;
+
+obj1.age = 34;
+
+console.log(obj1.age);
+console.log(obj2.age);
 
 
 
