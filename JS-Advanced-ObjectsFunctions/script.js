@@ -299,6 +299,7 @@ interviewQuestion('designer')('Tifa');
 ******************************************* Bind, Call and Apply *************************************
 */
 
+/*
 var john = {
     name: 'John',
     age: 23,
@@ -366,6 +367,34 @@ var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20)); // 'bind' make a copy
 
 console.log(ages);
 console.log(fullJapan);
+*/
+
+
+/*
+******************************************* Coding challenge 7 *************************************
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
