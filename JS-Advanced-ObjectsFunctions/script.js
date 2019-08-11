@@ -152,13 +152,17 @@ function calculateAge(el) {
 function isFullAge(el) {
     return el >= 18;
 }
-
+function checkMaxHR(el) {
+    return 206.9 - (0.67 * el);
+}
 
 var ages = arrayCalc(years, calculateAge);
 var fullAges = arrayCalc(ages, isFullAge);
+var maxHeartRate = arrayCalc(ages, checkMaxHR);
+
 console.log(ages);
 console.log(fullAges);
-
+console.log(maxHeartRate);
 
 
 
