@@ -281,13 +281,17 @@ function interviewQuestion(job) {
     return function(name) {
         if (job ==='teacher') {
             console.log(name + ' tell me, what subject do you teach?');
-        } else if (job === designer) {
+        } else if (job === 'designer') {
             console.log('What is a UX design ' + name + '?');
         } else {
             console.log('What do you do ' + name + '?')
         }
     }
 }
+
+interviewQuestion('coder')('Cloud');
+interviewQuestion('Avalanche member')('Barret');
+interviewQuestion('designer')('Tifa');
 
 
 
