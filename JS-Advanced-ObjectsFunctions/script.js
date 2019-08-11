@@ -175,6 +175,76 @@ console.log(maxHeartRate);
 ******************************************* Functions returning functions *************************************
 */
 
+function interviewQuestion(job) {
+    if (job === 'designer') {
+        return function(name) {
+            console.log(name + ' could you explain what UX design is?');
+        }
+    } else if (job === 'teacher') {
+        return function(name) {
+            console.log('What subject do you teach ' + name + '?');
+        }
+    } else {
+        return function(name) {
+            console.log('Hello ' + name + ', what do you do?');
+        }
+    }
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+var designerQuestion = interviewQuestion('designer');
+var otherQuestion = interviewQuestion('coder');
+
+teacherQuestion('Cloud');
+designerQuestion('Tifa');
+otherQuestion('Vincent');
+
+interviewQuestion('teacher')('Barret') // call returned function immediately by passing 'name' argument straight away
+
+
+
+function whatMateria(name) {
+    if (name === 'Cloud') {
+        return function(weapon) {
+            console.log('Based on your ' + weapon + ' you should have ultima and meteor materia in it.')
+        }
+    } else if ('Barret') {
+        return function(weapon) {
+            console.log('You have ' + weapon + ' , so you should have fire and ice materia.')
+        }
+    } else {
+        return function(weapon) {
+            console.log('I don\'t know you but you have ' + weapon + ' so you have all materia connected to sleep materia, nice!')
+        }
+    }
+}
+
+var cloudMateria = whatMateria('Cloud');
+var barretMateria = whatMateria('Barret');
+var tifaMateria = whatMateria('Tifa');
+
+cloudMateria('Ultima Weapon');
+barretMateria('Pulse Cannon');
+tifaMateria('Thunder GLoves');
+
+whatMateria('Cid')('Super Needle');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
