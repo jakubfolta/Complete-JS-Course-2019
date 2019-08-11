@@ -136,6 +136,7 @@ console.log(obj.name);
 ******************************************* Passing functions as arguments *************************************
 */
 
+/*
 var years = [1998, 1876, 1979, 2015, 1936];
 
 function arrayCalc(arr, fn) {
@@ -153,7 +154,11 @@ function isFullAge(el) {
     return el >= 18;
 }
 function checkMaxHR(el) {
-    return 206.9 - (0.67 * el);
+    if (el >= 18 && el <= 81) {
+        return Math.round(206.9 - (0.67 * el));
+    } else {
+        return 'Outside range!'
+    }
 }
 
 var ages = arrayCalc(years, calculateAge);
@@ -163,7 +168,12 @@ var maxHeartRate = arrayCalc(ages, checkMaxHR);
 console.log(ages);
 console.log(fullAges);
 console.log(maxHeartRate);
+*/
 
+
+/*
+******************************************* Functions returning functions *************************************
+*/
 
 
 
