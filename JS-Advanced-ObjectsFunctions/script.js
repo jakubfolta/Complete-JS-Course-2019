@@ -256,12 +256,38 @@ whatMateria('Cid')('Super Needle');
 */
 
 
+function retirement(retirementAge) {
+    var a = ' years until retirement.';
+    return function(yearOfBirth) {
+        var age = 2019 - yearOfBirth;
+        console.log((retirementAge - age) + a)
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementIceland = retirement(66);
+var retirementGermany = retirement(65);
+
+retirementUS(1990);
+retirementGermany(1994);
+retirementIceland(1978);
 
 
+retirement(64)(1987);
 
+// solidifying knowledge
 
-
-
+function interviewQuestion(job) {
+    return function(name) {
+        if (job ==='teacher') {
+            console.log(name + ' tell me, what subject do you teach?');
+        } else if (job === designer) {
+            console.log('What is a UX design ' + name + '?');
+        } else {
+            console.log('What do you do ' + name + '?')
+        }
+    }
+}
 
 
 
