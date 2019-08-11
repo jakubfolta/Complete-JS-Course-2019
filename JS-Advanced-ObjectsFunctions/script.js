@@ -337,7 +337,35 @@ emilyFormal('day');
 
 // solidifying knowledge
 
+var years = [1998, 1876, 1979, 2015, 1936];
 
+function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for(var i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el) {
+    return 2019 - el;
+}
+function isFullAge(limit, el) {
+    return el >= limit;
+}
+function checkMaxHR(el) {
+    if (el >= 18 && el <= 81) {
+        return Math.round(206.9 - (0.67 * el));
+    } else {
+        return 'Outside range!'
+    }
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20)); // 'bind' make a copy of this function with preset first parameter
+
+console.log(ages);
+console.log(fullJapan);
 
 
 
