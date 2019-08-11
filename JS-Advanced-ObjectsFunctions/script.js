@@ -255,7 +255,7 @@ whatMateria('Cid')('Super Needle');
 ******************************************* Closures *************************************
 */
 
-
+/*
 function retirement(retirementAge) {
     var a = ' years until retirement.';
     return function(yearOfBirth) {
@@ -292,16 +292,50 @@ function interviewQuestion(job) {
 interviewQuestion('coder')('Cloud');
 interviewQuestion('Avalanche member')('Barret');
 interviewQuestion('designer')('Tifa');
+*/
 
 
+/*
+******************************************* Bind, Call and Apply *************************************
+*/
+
+var john = {
+    name: 'John',
+    age: 23,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('Hello, My name is ' + this.name + '. I\'m a ' + this.job + ' and I am ' + this.age + ' years old.');
+        } else if (style === 'friendly') {
+            console.log('Hi there, I\'m ' + this.name + '. I\'m a ' + this.job + ' and I am ' + this.age + ' years old. Have a great ' + timeOfDay + '!');
+        }
+    }
+}
+
+john.presentation('friendly', 'evening');
 
 
+var emily = {
+    name: 'Emily',
+    job: 'designer',
+    age: '21'
+}
+
+john.presentation.call(emily, 'formal', 'morning');
+
+// john.presentation.apply(emily, ['friendly', 'night'])
+
+var johnFriendly = john.presentation.bind(john, 'friendly');
+
+johnFriendly('evening');
+johnFriendly('afternoon');
+
+var emilyFormal = john.presentation.bind(emily, 'friendly');
+
+emilyFormal('day');
 
 
-
-
-
-
+// solidifying knowledge
 
 
 
