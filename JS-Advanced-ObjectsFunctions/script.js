@@ -236,6 +236,7 @@ whatMateria('Cid')('Super Needle');
 ******************************************* IIFE *************************************
 */
 
+/*
 (function () {
     var score = Math.random() * 10;
     console.log(score <= 5);
@@ -247,10 +248,12 @@ whatMateria('Cid')('Super Needle');
     var score = Math.random() * 10;
     console.log(score >= 5 - goodluck);
 })(4);
+*/
 
 
-
-
+/*
+******************************************* Closures *************************************
+*/
 
 
 
