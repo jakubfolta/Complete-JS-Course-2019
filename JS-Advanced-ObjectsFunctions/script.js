@@ -175,6 +175,7 @@ console.log(maxHeartRate);
 ******************************************* Functions returning functions *************************************
 */
 
+/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
@@ -202,7 +203,7 @@ otherQuestion('Vincent');
 interviewQuestion('teacher')('Barret') // call returned function immediately by passing 'name' argument straight away
 
 
-
+// solidyfing knowledge
 function whatMateria(name) {
     if (name === 'Cloud') {
         return function(weapon) {
@@ -228,6 +229,12 @@ barretMateria('Pulse Cannon');
 tifaMateria('Thunder GLoves');
 
 whatMateria('Cid')('Super Needle');
+*/
+
+
+/*
+******************************************* IIFE *************************************
+*/
 
 
 
