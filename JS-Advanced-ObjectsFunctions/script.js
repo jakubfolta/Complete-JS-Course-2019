@@ -92,6 +92,8 @@ var tifa = Object.create(avalancheProto, {
 ******************************************* Primitives vs objects *************************************
 */
 
+
+/*
 // Primitives
 var a = 23;
 var b = a;
@@ -127,7 +129,12 @@ change(age, obj);
 
 console.log(age);
 console.log(obj.name);
+*/
 
+
+/*
+******************************************* Passing functions as arguments *************************************
+*/
 
 
 
