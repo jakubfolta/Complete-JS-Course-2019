@@ -398,12 +398,25 @@ c) correct answer (I would use a number for this)
 var Question = function(question, answers, rightAnswer) {
     this.question = question;
     this.answers = answers;
-    this.rightAnswer = rightAnswer
+    this.rightAnswer = rightAnswer;
+    this.selectQuestion = function() {
+        var number = Math.round(Math.random() * 2);
+        console.log(Questions[number].question);
+        var i;
+        for (i in Questions[number].answers)
+            console.log()
+
+    }
 }
 
-var Q1 = new Question('What is my name?', ['John', 'James', 'Jacob'], 2);
-var Q1 = new Question('What place I would like to visit?', ['Japan', 'Russia', 'Brazil'], 0);
-var Q1 = new Question('What is my favorite game?', ['Borderlands', 'The Witcher 3', 'God of War'], 1);
+var Q1 = new Question('What is my name?', {zero : 'John', first: 'James', second: 'Jacob'}, 2);
+var Q2 = new Question('What place I would like to visit?', {zero: 'Japan', second: 'Russia', third: 'Brazil'}, 0);
+var Q3 = new Question('What is my favorite game?', {zero: 'Borderlands', first: 'The Witcher 3', second: 'God of War'}, 1);
+
+var Questions = [Q1, Q2, Q3];
+Q1.selectQuestion();
+
+
 
 
 
