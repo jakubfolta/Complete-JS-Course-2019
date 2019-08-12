@@ -413,8 +413,10 @@ c) correct answer (I would use a number for this)
     Question.prototype.checkAnswer = function() {
         if (userAnswer == this.rightAnswer) {
             console.log('Correct answer!');
+            nextQuestion();
         } else {
             console.log('Wrong answer, try again :)');
+            nextQuestion();
         }
     };
 
@@ -423,29 +425,17 @@ c) correct answer (I would use a number for this)
     var q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
 
     var questions = [q1, q2, q3];
+    var userAnswer;
 
-    var number = Math.floor(Math.random() * questions.length );
-
-    questions[number].selectQuestion();
-
-    var userAnswer = prompt('Please select the correct answer (just type the number)');
-
-    questions[number].checkAnswer();
+    function nextQuestion() {
+        var number = Math.floor(Math.random() * questions.length );
+        questions[number].selectQuestion();
+        userAnswer = prompt('Please select the correct answer (just type the number)');
+        questions[number].checkAnswer();
     }
+    nextQuestion();
+}
 )();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
