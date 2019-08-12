@@ -9,7 +9,7 @@ var john = {
     job: 'teacher'
 };
 
-var AvalancheMember = function(name, hasMateria, weapon) {
+var AvalancheMember = function(name, hasMateria, weapon) { // function constructor, start with capital letter
     this.name = name;
     this.hasMateria = hasMateria;
     this.weapon = weapon;
@@ -44,7 +44,7 @@ var barret = new AvalancheMember('Barret', true, 'Plasma Cannon');
 
 
 // inheritance
-john.calculateAge();
+john.calculateAge(); // instances of Person have access to Person prototype methods
 jane.calculateAge();
 cloud.calculateAge();
 
@@ -110,7 +110,7 @@ var obj2 = obj1;
 
 obj1.age = 34;
 
-console.log(obj1.age);
+console.log(obj1.age); // obj1.age and obj2.age are the same because they have ...........reference............ to same object
 console.log(obj2.age);
 
 // Functions
