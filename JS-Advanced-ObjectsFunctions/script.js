@@ -395,7 +395,7 @@ c) correct answer (I would use a number for this)
 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 */
 
-(function quizInit() {
+(function() {
     var Question = function(question, answers, rightAnswer) {
         this.question = question;
         this.answers = answers;
@@ -413,10 +413,10 @@ c) correct answer (I would use a number for this)
     Question.prototype.checkAnswer = function() {
         if (userAnswer == this.rightAnswer) {
             console.log('Correct answer!');
-            nextQuestion();
+        } else if (userAnswer === 'exit') {
+            console.log('Thank you for your game.')
         } else {
             console.log('Wrong answer, try again :)');
-            nextQuestion();
         }
     };
 
@@ -427,15 +427,13 @@ c) correct answer (I would use a number for this)
     var questions = [q1, q2, q3];
     var userAnswer;
 
-    function nextQuestion() {
+    //function nextQuestion() {
         var number = Math.floor(Math.random() * questions.length );
         questions[number].selectQuestion();
         userAnswer = prompt('Please select the correct answer (just type the number)');
         questions[number].checkAnswer();
-    }
-    nextQuestion();
-}
-)();
+
+})();
 
 
 /*
