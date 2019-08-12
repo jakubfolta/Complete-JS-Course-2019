@@ -403,19 +403,29 @@ var Question = function(question, answers, rightAnswer) {
         var number = Math.round(Math.random() * 2);
         console.log(Questions[number].question);
         var i;
-        for (i in Questions[number].answers)
-            console.log()
-
+        for (i in Questions[number].answers) {
+            console.log(Questions[number].answers[i]);
+        }
+    }
+    this.checkAnswer = function() {
+        if (userAnswer === Questions[number].rightAnswer) {
+            console.log('Correct answer!');
+        } else {
+            console.log('Wrong answer, try again :)');
+        }
     }
 }
 
-var Q1 = new Question('What is my name?', {zero : 'John', first: 'James', second: 'Jacob'}, 2);
-var Q2 = new Question('What place I would like to visit?', {zero: 'Japan', second: 'Russia', third: 'Brazil'}, 0);
-var Q3 = new Question('What is my favorite game?', {zero: 'Borderlands', first: 'The Witcher 3', second: 'God of War'}, 1);
+var Q1 = new Question('What is my name?', {zero : '0: John', first: '1: James', second: '2: Jacob'}, 2);
+var Q2 = new Question('What place I would like to visit?', {zero: '0: Japan', second: '1: Russia', third: '2: Brazil'}, 0);
+var Q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
 
 var Questions = [Q1, Q2, Q3];
 Q1.selectQuestion();
 
+var userAnswer = prompt('Please select the correct answer (just type the number)');
+
+Q1.checkAnswer();
 
 
 
