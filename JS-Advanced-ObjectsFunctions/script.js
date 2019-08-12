@@ -395,38 +395,42 @@ c) correct answer (I would use a number for this)
 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 */
 
-var Question = function(question, answers, rightAnswer) {
-    this.question = question;
-    this.answers = answers;
-    this.rightAnswer = rightAnswer;
-    this.selectQuestion = function() {
-        var number = Math.round(Math.random() * 2);
-        console.log(Questions[number].question);
-        var i;
-        for (i in Questions[number].answers) {
-            console.log(Questions[number].answers[i]);
+(function quizInit() {
+    var Question = function(question, answers, rightAnswer) {
+        this.question = question;
+        this.answers = answers;
+        this.rightAnswer = rightAnswer;
+        this.selectQuestion = function() {
+            console.log(Questions[number].question);
+            var i;
+            for (i in Questions[number].answers) {
+                console.log(Questions[number].answers[i]);
+            }
+        }
+        this.checkAnswer = function() {
+            if (userAnswer == Questions[number].rightAnswer) {
+                console.log('Correct answer!');
+            } else {
+                console.log('Wrong answer, try again :)');
+            }
         }
     }
-    this.checkAnswer = function() {
-        if (userAnswer === Questions[number].rightAnswer) {
-            console.log('Correct answer!');
-        } else {
-            console.log('Wrong answer, try again :)');
-        }
+
+    var Q1 = new Question('What is my name?', {zero : '0: John', first: '1: James', second: '2: Jacob'}, 2);
+    var Q2 = new Question('What place I would like to visit?', {zero: '0: Japan', second: '1: Russia', third: '2: Brazil'}, 0);
+    var Q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
+
+    var Questions = [Q1, Q2, Q3];
+
+    var number = Math.round(Math.random() * 2);
+
+    Q1.selectQuestion();
+
+    var userAnswer = prompt('Please select the correct answer (just type the number)');
+
+    Q1.checkAnswer();
     }
-}
-
-var Q1 = new Question('What is my name?', {zero : '0: John', first: '1: James', second: '2: Jacob'}, 2);
-var Q2 = new Question('What place I would like to visit?', {zero: '0: Japan', second: '1: Russia', third: '2: Brazil'}, 0);
-var Q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
-
-var Questions = [Q1, Q2, Q3];
-Q1.selectQuestion();
-
-var userAnswer = prompt('Please select the correct answer (just type the number)');
-
-Q1.checkAnswer();
-
+)();
 
 
 
