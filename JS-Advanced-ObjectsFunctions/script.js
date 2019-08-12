@@ -404,8 +404,7 @@ c) correct answer (I would use a number for this)
 
     Question.prototype.selectQuestion = function() {
         console.log(this.question);
-        var i;
-        for (i in this.answers) {
+        for (var i = 0; i < this.answers.length; i++) {
             console.log(i + ': ' + this.answers[i]);
         }
     };
@@ -413,6 +412,7 @@ c) correct answer (I would use a number for this)
     Question.prototype.checkAnswer = function() {
         if (userAnswer == this.rightAnswer) {
             console.log('Correct answer!');
+            nextQuestion();
         } else if (userAnswer === 'exit') {
             console.log('Thank you for your game.')
         } else {
@@ -420,19 +420,20 @@ c) correct answer (I would use a number for this)
         }
     };
 
-    var q1 = new Question('What is my name?', {zero : 'John', first: 'James', second: 'Jacob'}, 2);
-    var q2 = new Question('What place I would like to visit?', {zero: 'Japan', second: 'Russia', third: 'Brazil'}, 0);
-    var q3 = new Question('What is my favorite game?', {zero: 'Borderlands', first: 'The Witcher 3', second: 'God of War'}, 1);
+    var q1 = new Question('What is my name?', ['John', 'James', 'Jacob'], 2);
+    var q2 = new Question('What place I would like to visit?', ['Japan', 'Russia', 'Brazil'], 0);
+    var q3 = new Question('What is my favorite game?', ['Borderlands', 'The Witcher 3', 'God of War'], 1);
 
     var questions = [q1, q2, q3];
     var userAnswer;
 
-    //function nextQuestion() {
+    function nextQuestion() {
         var number = Math.floor(Math.random() * questions.length );
         questions[number].selectQuestion();
         userAnswer = prompt('Please select the correct answer (just type the number)');
         questions[number].checkAnswer();
-
+    }
+    nextQuestion();
 })();
 
 
