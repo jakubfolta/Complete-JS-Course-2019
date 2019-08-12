@@ -24,7 +24,7 @@ var Person = function(name, yearOfBirth, job) {
 // prototype
 Person.prototype.calculateAge = function() {
     console.log(2019 - this.yearOfBirth);
-}
+};
 
 Person.prototype.lastName = 'Smith';
 
@@ -400,35 +400,37 @@ c) correct answer (I would use a number for this)
         this.question = question;
         this.answers = answers;
         this.rightAnswer = rightAnswer;
-        this.selectQuestion = function() {
-            console.log(Questions[number].question);
-            var i;
-            for (i in Questions[number].answers) {
-                console.log(Questions[number].answers[i]);
-            }
+    };
+
+    Question.prototype.selectQuestion = function() {
+        console.log(this.question);
+        var i;
+        for (i in this.answers) {
+            console.log(this.answers[i]);
         }
-        this.checkAnswer = function() {
-            if (userAnswer == Questions[number].rightAnswer) {
-                console.log('Correct answer!');
-            } else {
-                console.log('Wrong answer, try again :)');
-            }
+    };
+
+    Question.prototype.checkAnswer = function() {
+        if (userAnswer == this.rightAnswer) {
+            console.log('Correct answer!');
+        } else {
+            console.log('Wrong answer, try again :)');
         }
-    }
+    };
 
-    var Q1 = new Question('What is my name?', {zero : '0: John', first: '1: James', second: '2: Jacob'}, 2);
-    var Q2 = new Question('What place I would like to visit?', {zero: '0: Japan', second: '1: Russia', third: '2: Brazil'}, 0);
-    var Q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
+    var q1 = new Question('What is my name?', {zero : '0: John', first: '1: James', second: '2: Jacob'}, 2);
+    var q2 = new Question('What place I would like to visit?', {zero: '0: Japan', second: '1: Russia', third: '2: Brazil'}, 0);
+    var q3 = new Question('What is my favorite game?', {zero: '0: Borderlands', first: '1: The Witcher 3', second: '2: God of War'}, 1);
 
-    var Questions = [Q1, Q2, Q3];
+    var questions = [q1, q2, q3];
 
-    var number = Math.round(Math.random() * 2);
+    var number = Math.floor(Math.random() * questions.length );
 
-    Q1.selectQuestion();
+    questions[number].selectQuestion();
 
     var userAnswer = prompt('Please select the correct answer (just type the number)');
 
-    Q1.checkAnswer();
+    questions[number].checkAnswer();
     }
 )();
 
