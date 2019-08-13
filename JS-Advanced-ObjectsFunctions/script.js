@@ -416,6 +416,7 @@ c) correct answer (I would use a number for this)
             this.displayScore(score);
             nextQuestion();
         } else if (userAnswer === 'exit') {
+            this.displayScore(score);
             console.log('Thank you for your game.')
         } else {
             console.log('Wrong answer, try again :)');
