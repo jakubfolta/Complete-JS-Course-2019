@@ -409,19 +409,16 @@ c) correct answer (I would use a number for this)
         }
     };
 
-    Question.prototype.checkAnswer = function() {
-        if (userAnswer == this.rightAnswer) {
+    Question.prototype.checkAnswer = function(answer, callback) {
+        var sc = 0;
+        if (answer == this.rightAnswer) {
             console.log('Correct answer!');
-            score += 1;
-            this.displayScore(score);
-            nextQuestion();
-        } else if (userAnswer === 'exit') {
-            this.displayScore(score);
-            console.log('Thank you for your game.')
+            sc = callback(true);
         } else {
             console.log('Wrong answer, try again :)');
-            nextQuestion();
+            sc = callback(false);
         }
+        this.displayScore(sc);
     };
 
     Question.prototype.displayScore = function(score) {
@@ -433,15 +430,31 @@ c) correct answer (I would use a number for this)
     var q3 = new Question('What is my favorite game?', ['Borderlands', 'The Witcher 3', 'God of War'], 1);
 
     var questions = [q1, q2, q3];
-    var userAnswer;
-    var score = 0;
+
+    function score() {
+        var sc = 0;
+        return function(correct) {
+            if (correct) {
+                sc++;
+            }
+            return sc;
+        }
+    };
+
+    var keepScore = score();
 
     function nextQuestion() {
         var number = Math.floor(Math.random() * questions.length );
         questions[number].selectQuestion();
-        userAnswer = prompt('Please select the correct answer (just type the number)');
-        questions[number].checkAnswer();
-    }
+        var userAnswer = prompt('Please select the correct answer (just type the number)');
+
+        if (userAnswer === 'exit') {
+            console.log('Thank you for your time ;)');
+        } else {
+            questions[number].checkAnswer(userAnswer, keepScore);
+            nextQuestion();
+        }
+    };
     nextQuestion();
 })();
 
