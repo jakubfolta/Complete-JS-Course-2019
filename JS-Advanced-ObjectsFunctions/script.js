@@ -412,12 +412,19 @@ c) correct answer (I would use a number for this)
     Question.prototype.checkAnswer = function() {
         if (userAnswer == this.rightAnswer) {
             console.log('Correct answer!');
+            score += 1;
+            this.displayScore(score);
             nextQuestion();
         } else if (userAnswer === 'exit') {
             console.log('Thank you for your game.')
         } else {
             console.log('Wrong answer, try again :)');
+            nextQuestion();
         }
+    };
+
+    Question.prototype.displayScore = function(score) {
+        console.log('Your score: ' + score);
     };
 
     var q1 = new Question('What is my name?', ['John', 'James', 'Jacob'], 2);
@@ -426,6 +433,7 @@ c) correct answer (I would use a number for this)
 
     var questions = [q1, q2, q3];
     var userAnswer;
+    var score = 0;
 
     function nextQuestion() {
         var number = Math.floor(Math.random() * questions.length );
