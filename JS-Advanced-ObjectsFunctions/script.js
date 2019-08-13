@@ -410,7 +410,7 @@ c) correct answer (I would use a number for this)
     };
 
     Question.prototype.checkAnswer = function(answer, callback) {
-        var sc = 0;
+        var sc;
         if (answer == this.rightAnswer) {
             console.log('Correct answer!');
             sc = callback(true);
