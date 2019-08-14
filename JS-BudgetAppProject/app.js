@@ -9,7 +9,15 @@ var budgetController = (function() {
 // UI CONTROLLER
 var UIController = (function() {
 
-    // some code
+
+
+    return {
+        getInput = function() {
+            var type = document.querySelector('.add__type').value;
+            var description = document.querySelector('.add__description').value;
+            var value = document.querySelector('.add__value').value;
+        }
+    }
 
 })();
 
