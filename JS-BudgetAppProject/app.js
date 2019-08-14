@@ -13,6 +13,7 @@ var budgetController = (function() {
         this.value = value;
     };
 
+
 })();
 
 
