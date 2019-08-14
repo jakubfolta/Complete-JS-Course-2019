@@ -15,7 +15,7 @@ var UIController = (function() {
 // GLOBAL APP CONTROLLER
 var controller = (function(budgetCtrl, UICtrl) {
 
-    document.querySelector('.add__btn').addEventSelector('click', function() {
+    document.querySelector('.add__btn').addEventListener('click', function() {
 
         // 1. Get the filled input data
         // 2. Add the item to the budget controller
@@ -25,9 +25,11 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     })
 
-    document.addEventListener('keypress', function() {
+    document.addEventListener('keypress', function(event) {
 
-
+        if (event.keyCode === 13) {
+            console.log('ENTER was pressed!');
+        }
 
     })
 
