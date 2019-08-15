@@ -7,7 +7,7 @@ var budgetController = (function() {
     }
 
     var Income = function(id, description, value) {
-
+        this.id = id;
     }
 
 })();
