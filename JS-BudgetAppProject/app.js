@@ -28,16 +28,22 @@ var budgetController = (function() {
         addItem: function(type, des, val) {
             var newItem, id;
 
+            // Create new id
             ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
 
+            // Create new item based on type
             if (type === 'exp') {
                 newItem = new Expense(id, des, val);
             } else if (type === 'inc') {
                 newItem = new Income(id, des, val);
             }
         },
+
+        // Push new item into data structure
         data.allItems[type].push(newItem);
 
+        // Return new element
+        return newItem;
     }
 })();
 
