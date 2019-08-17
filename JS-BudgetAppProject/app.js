@@ -29,7 +29,11 @@ var budgetController = (function() {
             var newItem, id;
 
             // Create new id
-            ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+            if (data.allItems[type].length > 0) {
+                id = data.allItems[type][data.allItems[type].length - 1].id + 1;
+            } else {
+                id = 0;
+            }
 
             // Create new item based on type
             if (type === 'exp') {
@@ -37,13 +41,16 @@ var budgetController = (function() {
             } else if (type === 'inc') {
                 newItem = new Income(id, des, val);
             }
+
+            // Push new item into data structure
+            data.allItems[type].push(newItem);
+
+            // Return new element
+            return newItem;
         },
-
-        // Push new item into data structure
-        data.allItems[type].push(newItem);
-
-        // Return new element
-        return newItem;
+        testing: function() {
+            console.log(data);
+        }
     }
 })();
 
@@ -90,12 +97,14 @@ var controller = (function(budgetCtrl, UICtrl) {
     };
 
     var ctrlAddItem = function() {
+        var input, newItem;
+
         // 1. Get the filled input data
-        var input = UICtrl.getInput();
+        input = UICtrl.getInput();
         console.log(input);
 
         // 2. Add the item to the budget controller
-        budgetCtrl.addItem(input.getInput.type, input.getInput.description, input.getInput.value)
+        newItem = budgetCtrl.addItem(input.type, input.description, input.value)
         // 3. Add the item to the UI
 
         // 4. Calculate the budget
@@ -108,7 +117,7 @@ var controller = (function(budgetCtrl, UICtrl) {
             console.log('Initialize Listeners...')
             setupEventListeners();
         }
-    };+
+    };
 
 
 })(budgetController, UIController);
