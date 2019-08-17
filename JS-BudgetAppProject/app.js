@@ -5,13 +5,13 @@ var budgetController = (function() {
         this.id = id;
         this.description = description;
         this.value = value;
-    }
+    };
 
     var Income = function(id, description, value) {
         this.id = id;
         this.description = description;
         this.value = value;
-    }
+    };
 
     var data = {
         allItems: {
@@ -21,6 +21,18 @@ var budgetController = (function() {
         totals: {
             exp: 0,
             inc: 0
+        }
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem;
+
+            if (type === 'exp') {
+                newItem = new Expense(id, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(id, des, val);
+            }
         }
     }
 
