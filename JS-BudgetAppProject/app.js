@@ -47,9 +47,6 @@ var budgetController = (function() {
 
             // Return new element
             return newItem;
-        },
-        testing: function() {
-            console.log(data);
         }
     }
 })();
@@ -104,7 +101,6 @@ var controller = (function(budgetCtrl, UICtrl) {
 
         // 2. Add the item to the budget controller
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
-    
         // 3. Add the item to the UI
 
         // 4. Calculate the budget
