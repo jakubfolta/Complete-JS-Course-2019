@@ -87,8 +87,14 @@ var UIController = (function() {
             newHtml = newHtml.replace('%value%', obj.value);
 
             // Insert the HTML into the DOM
-            e1 = document.querySelector('.expenses__list');
-            e1.insertAdjacentHTML('afterbegin', newHtml);
+            if (type === 'inc') {
+                i = document.querySelector('.income__list');
+                i.insertAdjacentHTML('beforeend', newHtml);
+
+            } else if (type === 'exp') {
+                i = document.querySelector('.expenses__list');
+                i.insertAdjacentHTML('beforeend', newHtml);
+            }
         },
 
         getDOMstrings: function() {
@@ -121,7 +127,9 @@ var controller = (function(budgetCtrl, UICtrl) {
 
         // 2. Add the item to the budget controller
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+
         // 3. Add the item to the UI
+        addListItem(newItem, input.type);
 
         // 4. Calculate the budget
 
