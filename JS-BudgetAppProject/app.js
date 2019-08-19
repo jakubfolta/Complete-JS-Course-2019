@@ -83,10 +83,12 @@ var UIController = (function() {
 
             // Replace the placeholder text with some actual data
             newHtml = html.replace('%id%', obj.id);
-            newHtml = html.replace('%description%', obj.description);
-            newHtml = html.replace('%value%', obj.value);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
 
             // Insert the HTML into the DOM
+            e1 = document.querySelector('.expenses__list');
+            e1.insertAdjacentHTML('afterbegin', newHtml);
         },
 
         getDOMstrings: function() {
