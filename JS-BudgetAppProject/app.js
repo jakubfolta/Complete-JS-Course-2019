@@ -96,6 +96,10 @@ var UIController = (function() {
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
 
+        clearFields: function() {
+
+        },
+
         getDOMstrings: function() {
             return DOMstrings;
         }
