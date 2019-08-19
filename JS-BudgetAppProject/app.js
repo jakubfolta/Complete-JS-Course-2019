@@ -59,7 +59,9 @@ var UIController = (function() {
         inputType: '.add__type',
         inputDescription: '.add__description',
         inputValue: '.add__value',
-        addButton: '.add__btn'
+        addButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list'
     };
 
     return {
@@ -88,11 +90,11 @@ var UIController = (function() {
 
             // Insert the HTML into the DOM
             if (type === 'inc') {
-                i = document.querySelector('.income__list');
+                i = document.querySelector(DOMstrings.incomeContainer);
                 i.insertAdjacentHTML('beforeend', newHtml);
 
             } else if (type === 'exp') {
-                i = document.querySelector('.expenses__list');
+                i = document.querySelector(DOMstrings.expensesContainer);
                 i.insertAdjacentHTML('beforeend', newHtml);
             }
         },
