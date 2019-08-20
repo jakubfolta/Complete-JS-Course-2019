@@ -97,11 +97,17 @@ var UIController = (function() {
         },
 
         clearFields: function() {
-            var arrFields;
+            var fields, fieldsArr;
 
-            arrFields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
 
-            Array.prototype.slice.call(arrFields)
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = '';
+            });
+
+            fieldsArr[0].focus;
         },
 
         getDOMstrings: function() {
