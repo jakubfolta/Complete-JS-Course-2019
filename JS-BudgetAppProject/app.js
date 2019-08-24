@@ -7,7 +7,10 @@ var budgetController = (function() {
         this.value = value;
     };
 
-    
+    var Income = function(id, description, value) {
+            
+    };
+
     var data = {
         allItems: {
             exp: [],
