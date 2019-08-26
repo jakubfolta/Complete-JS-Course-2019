@@ -60,7 +60,8 @@ var budgetController = (function() {
         calculateBudget = function() {
 
             // calculate total income and expenses
-
+            calculateTotal('inc');
+            calculateTotal('exp');
             // calculate the budget: income - expenses
 
             // calculate the percentage of income that we spent
