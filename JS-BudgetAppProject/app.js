@@ -31,7 +31,7 @@ var budgetController = (function() {
             inc: 0
         },
         budget = 0,
-        percentage = 0
+        percentage = -1 // use -1 when something is nonexistent
     };
 
     return {
@@ -67,7 +67,7 @@ var budgetController = (function() {
             // calculate the budget: income - expenses
             data.budget = data.totals.inc - data.totals.exp;
             // calculate the percentage of income that we spent
-
+            data.percentage = Math.round(data.totals.exp / data.totals.inc) * 100;
         }
 
     };
