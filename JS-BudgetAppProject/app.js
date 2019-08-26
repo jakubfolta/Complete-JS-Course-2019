@@ -75,7 +75,7 @@ var budgetController = (function() {
             totalInc: data.totals.inc,
             totalExp: data.totals.exp,
             budget: data.budget,
-            percentage: data.percentage                
+            percentage: data.percentage
             }
         },
 
@@ -166,7 +166,9 @@ var controller = (function(budgetCtrl, UICtrl) {
     var updateBudget = function() {
         // 1. Calculate the budget
         budgetCtrl.calculateBudget();
+
         // 2. Return the budget
+        var budget = budgetCtrl.getBudget();
 
         // 3. Display the budget in the UI
 
