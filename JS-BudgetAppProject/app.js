@@ -82,7 +82,6 @@ var budgetController = (function() {
             percentage: data.percentage
             }
         },
-
     };
 })();
 
