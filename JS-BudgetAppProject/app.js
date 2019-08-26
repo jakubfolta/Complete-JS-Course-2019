@@ -47,8 +47,13 @@ var budgetController = (function() {
 
             // Return new element
             return newItem;
+        },
+
+        calculateBudget = function() {
+
         }
-    }
+
+    };
 })();
 
 
@@ -138,7 +143,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         // 2. Return the budget
 
         // 3. Display the budget in the UI
-        
+
     };
 
     var ctrlAddItem = function() {
