@@ -1,4 +1,4 @@
-// BUDGETY CONTROLLER
+/////////////////////////////// BUDGETY CONTROLLER ////////////////////////////////////
 var budgetController = (function() {
 
     var Expense = function(id, description, value) {
@@ -62,10 +62,12 @@ var budgetController = (function() {
         deleteItem: function(type, id) {
             var ids, index;
 
+            // Make a new array with only ids
             ids = data.allItems[type].map(function(current) {
                 return current.id
             });
 
+            // Get index of id in array and delete this item from data structure
             index = ids.indexOf(id);
             if (index !== -1) {
                 data.allItems[type].splice(index, 1);
@@ -105,7 +107,7 @@ var budgetController = (function() {
 })();
 
 
-// UI CONTROLLER
+/////////////////////////////// UI CONTROLLER ////////////////////////////////////
 var UIController = (function() {
 
     var DOMstrings = {
@@ -188,7 +190,7 @@ var UIController = (function() {
 })();
 
 
-// GLOBAL APP CONTROLLER
+/////////////////////////////// GLOBAL APP CONTROLLER ////////////////////////////////////
 var controller = (function(budgetCtrl, UICtrl) {
 
     var setupEventListeners = function() {
