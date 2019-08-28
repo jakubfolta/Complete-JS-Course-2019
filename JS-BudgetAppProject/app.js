@@ -185,7 +185,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         });
 
         document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
-        
+
     };
 
     var updateBudget = function() {
@@ -220,6 +220,10 @@ var controller = (function(budgetCtrl, UICtrl) {
             updateBudget();
         }
     };
+
+    var ctrlDeleteItem = function(event) {
+        console.log(event.target.parentNode.parentNode.parentNode.parentNode.id);
+    }
 
     return {
         init: function() {
