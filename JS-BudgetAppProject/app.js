@@ -202,7 +202,7 @@ var controller = (function(budgetCtrl, UICtrl) {
             }
         });
 
-        document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+        document.querySelector('.container').addEventListener('click', ctrlDeleteItem);
 
     };
 
@@ -239,26 +239,19 @@ var controller = (function(budgetCtrl, UICtrl) {
         }
     };
 
-    var ctrlDeleteItem = function(event) {
-        var itemID, splitID, type, ID;
+    var ctrlDeleteItem = function(e) {
+        var itemID, splitID;
 
         itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+        console.log(itemID);
 
-        if (itemID) {
-
-            // inc-1
-            splitID = itemID.split('-');
-            type = splitID[0];
-            ID = parseInt(splitID[1]);
-        }
-
-        // 1. Delete the item from the data structure
-        budgetCtrl.deleteItem(type, ID);
-
-        // 2. Delete the item from the UI
-
-        // 3. Update and show the new budget
+        splitID = itemID.split('-');
+        console.log(splitID);
     }
+
+
+
+
 
     return {
         init: function() {
