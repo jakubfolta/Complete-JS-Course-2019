@@ -152,10 +152,10 @@ var UIController = (function() {
 
         displayBudget: function(obj) {
 
-            document.querySelector(DOMstrings.incomeLabel).textContent(obj.totalInc);
-            document.querySelector(DOMstrings.expensesLabel).textContent(obj.totalExp);
-            document.querySelector(DOMstrings.budgetLabel).textContent(obj.budget);
-            document.querySelector(DOMstrings.percentageLabel).textContent(obj.percentage);
+            document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
+            document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
+            document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+            document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage;
         },
 
         getDOMstrings: function() {
@@ -187,7 +187,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         var budget = budgetCtrl.getBudget();
 
         // 3. Display the budget in the UI
-
+        UICtrl.displayBudget(budget);
         console.log(budget);
     };
 
