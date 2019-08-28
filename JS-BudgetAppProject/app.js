@@ -78,7 +78,7 @@ var budgetController = (function() {
 
         getBudget: function() {
             return {
-              totalInc: data.totals.inc,
+            totalInc: data.totals.inc,
             totalExp: data.totals.exp,
             budget: data.budget,
             percentage: data.percentage
@@ -99,9 +99,9 @@ var UIController = (function() {
         incomeContainer: '.income__list',
         expensesContainer: '.expenses__list',
         budgetLabel: '.budget__value',
-        budgetIncome: '.budget__income--value',
-        budgetExpenses: '.budget__expenses--percentage',
-        percentage: '.budget__expenses--percentage'
+        incomeLabel: '.budget__income--value',
+        expensesLabel: '.budget__expenses--percentage',
+        percentageLabel: '.budget__expenses--percentage'
     };
 
     return {
@@ -150,8 +150,12 @@ var UIController = (function() {
             fieldsArr[0].focus();
         },
 
-        displayBudget: function() {
+        displayBudget: function(obj) {
 
+            document.querySelector(DOMstrings.incomeLabel).textContent(obj.totalInc);
+            document.querySelector(DOMstrings.expensesLabel).textContent(obj.totalExp);
+            document.querySelector(DOMstrings.budgetLabel).textContent(obj.budget);
+            document.querySelector(DOMstrings.percentageLabel).textContent(obj.percentage);
         },
 
         getDOMstrings: function() {
