@@ -1,10 +1,16 @@
 /////////////////////////////// BUDGETY CONTROLLER ////////////////////////////////////
 var budgetController = (function() {
 
-    var Expense = function(id, description, value) {
+    var Expense = function(id, description, value, percentage) {
         this.id = id;
         this.description = description;
         this.value = value;
+        this.percentage = -1;
+    };
+
+    Expense.prototype.calcPercentage = function(totalIncome) {
+
+        this.percentage = Math.round((this.value / totalIncome) * 100)
     };
 
     var Income = function(id, description, value) {
@@ -89,6 +95,10 @@ var budgetController = (function() {
             } else {
                 data.percentage = -1;
             }
+        },
+
+        calculatePercentages: function() {
+
         },
 
         getBudget: function() {
@@ -231,7 +241,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         // 2. Read percentages from the budget controller
 
         // 3. Display percentages in the UI
-    }
+    };
 
     var ctrlAddItem = function() {
         var input, newItem;
@@ -252,6 +262,9 @@ var controller = (function(budgetCtrl, UICtrl) {
 
             // 5. Calculate and update budget;
             updateBudget();
+
+            // 6. Calculate and update percentages
+            updatePercentages();
         }
     };
 
@@ -274,6 +287,9 @@ var controller = (function(budgetCtrl, UICtrl) {
 
             // 3. Update and show the budget
             updateBudget();
+
+            // 4. Calculate and update percentages
+            updatePercentages();
         }
 
 
