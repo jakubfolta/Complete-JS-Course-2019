@@ -156,6 +156,10 @@ var UIController = (function() {
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
 
+        deleteListItem: function(selectorID) {
+
+        },
+
         clearFields: function() {
             var fields, fieldsArr;
 
