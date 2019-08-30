@@ -216,7 +216,7 @@ var UIController = (function() {
             }
         },
 
-        displayPercentage: function(percentage) {
+        displayPercentage: function(percentages) {
 
             var fields = document.querySelectorAll(expensesPercLabel);
 
@@ -227,7 +227,11 @@ var UIController = (function() {
             };
 
             nodeListForEach(fields, function(current, index) {
-                current.textContent = percentages[index] + '%';
+                if (percentages[index] > 0) {
+                    current.textContent = percentages[index] + '%';
+                } else {
+                    current.textContent = '---';
+                }
             });
 
         },
