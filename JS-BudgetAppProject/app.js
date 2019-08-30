@@ -218,6 +218,9 @@ var UIController = (function() {
 
         displayPercentage: function(percentage) {
 
+            var fields = document.querySelectorAll(expensesPercLabel);
+
+            
         },
 
         getDOMstrings: function() {
