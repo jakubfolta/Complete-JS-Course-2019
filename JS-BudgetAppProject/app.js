@@ -216,11 +216,11 @@ var UIController = (function() {
             }
         },
 
-        displayPercentage: function(percentages) {
+        displayPercentages = function(percentages) {
 
-            var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
+            fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
 
-            var nodeListForEach = function(list, callback) {
+            nodeListForEach = function(list, callback) {
                 for (var i = 0; i < list.length; i++) {
                     callback(list[i], i);
                 }
@@ -228,12 +228,11 @@ var UIController = (function() {
 
             nodeListForEach(fields, function(current, index) {
                 if (percentages[index] > 0) {
-                    current.textContent = percentages[index] + '%';
+                    current.textContent = percentages[index];
                 } else {
-                    current.textContent = '---';
+                    current.textContent = '---'
                 }
             });
-
         },
 
         getDOMstrings: function() {
@@ -243,6 +242,41 @@ var UIController = (function() {
 })();
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+displayPercentage: function(percentages) {
+
+    var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
+
+    var nodeListForEach = function(list, callback) {
+        for (var i = 0; i < list.length; i++) {
+            callback(list[i], i);
+        }
+    };
+
+    nodeListForEach(fields, function(current, index) {
+        if (percentages[index] > 0) {
+            current.textContent = percentages[index] + '%';
+        } else {
+            current.textContent = '---';
+        }
+    });
+
+},
 /////////////////////////////// GLOBAL APP CONTROLLER ////////////////////////////////////
 var controller = (function(budgetCtrl, UICtrl) {
 
