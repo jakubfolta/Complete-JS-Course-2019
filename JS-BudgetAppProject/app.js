@@ -279,7 +279,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         // 2. Read percentages from the budget controller
         percentages = budgetCtrl.getPercentages();
         // 3. Display percentages in the UI
-        console.log(percentages);
+        UICtrl.displayPercentage(percentages);
     };
 
     var ctrlAddItem = function() {
