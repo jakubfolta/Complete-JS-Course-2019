@@ -220,7 +220,16 @@ var UIController = (function() {
 
             var fields = document.querySelectorAll(expensesPercLabel);
 
-            
+            var nodeListForEach = function(list, callback) {
+                for (var i = 0; i < list.length; i++) {
+                    callback(list[i], i);
+                }
+            };
+
+            nodeListForEach(fields, function(current, index) {
+                current.textContent = percentages[index] + '%';
+            });
+
         },
 
         getDOMstrings: function() {
