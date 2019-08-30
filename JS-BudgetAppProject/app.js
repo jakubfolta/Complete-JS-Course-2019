@@ -147,7 +147,8 @@ var UIController = (function() {
         incomeLabel: '.budget__income--value',
         expensesLabel: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage',
-        container: '.container'
+        container: '.container',
+        expensesPercLabel: '.item__percentage'
     };
 
     return {
@@ -215,6 +216,10 @@ var UIController = (function() {
             }
         },
 
+        displayPercentage: function(percentage) {
+
+        },
+
         getDOMstrings: function() {
             return DOMstrings;
         }
@@ -263,9 +268,9 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     var ctrlAddItem = function() {
         var input, newItem;
-
         // 1. Get the filled input data
         input = UICtrl.getInput();
+
 
         if (input.description !== '' && !isNaN(input.value) && input.value > 0) {
 
