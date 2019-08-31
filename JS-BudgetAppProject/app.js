@@ -177,7 +177,7 @@ var UIController = (function() {
             // Replace the placeholder text with some actual data
             newHtml = html.replace('%id%', obj.id);
             newHtml = newHtml.replace('%description%', obj.description);
-            newHtml = newHtml.replace('%value%', obj.value);
+            newHtml = newHtml.replace('%value%', formatNumber(obj.value, type));
 
             // Insert the HTML into the DOM
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
@@ -236,7 +236,7 @@ var UIController = (function() {
         },
 
         formatNumber: function(num, type) {
-            var numSplit, int, decimal, sign;
+            var numSplit, int, decimal;
 
             // Get absolute number
             num = Math.abs(num);
@@ -254,11 +254,8 @@ var UIController = (function() {
 
             decimal = numSplit[1];
 
-            // Set proper sign
-            type === 'inc' ? sign = '+' : sign = '-';
-
             // Return proper format
-            return sign + ' ' + int + '.' + decimal;
+            return (type === 'inc' ? '+' : '-') + ' ' + int + '.' + decimal;
         },
 
         getDOMstrings: function() {
