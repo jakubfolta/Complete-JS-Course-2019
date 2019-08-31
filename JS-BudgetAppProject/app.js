@@ -235,7 +235,7 @@ var UIController = (function() {
             });
         },
 
-        formatNumber() {
+        formatNumber: function(num, type) {
 
         },
 
