@@ -236,7 +236,7 @@ var UIController = (function() {
         },
 
         formatNumber: function(num, type) {
-            var numSplit, int, decimal;
+            var numSplit, int, decimal, sign;
 
             // Get absolute number
             num = Math.abs(num);
@@ -249,12 +249,16 @@ var UIController = (function() {
 
             int = numSplit[0];
             if (int.length > 3) {
-                int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);   
+                int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);
             }
 
             decimal = numSplit[1];
 
+            // Set proper sign
+            type === 'inc' ? sign = '+' : sign = '-';
 
+            // Return proper format
+            return sign + ' ' + int + '.' + decimal;
         },
 
         getDOMstrings: function() {
