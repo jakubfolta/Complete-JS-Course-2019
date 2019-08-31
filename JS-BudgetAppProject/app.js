@@ -236,6 +236,7 @@ var UIController = (function() {
         },
 
         formatNumber: function(num, type) {
+            var numSplit, int, decimal;
 
             // Get absolute number
             num = Math.abs(num);
@@ -244,6 +245,10 @@ var UIController = (function() {
             num = num.toFixed(2);
 
             // Create comma separating numbers
+            numSplit = num.split('.');
+
+            int = numSplit[0];
+            decimal = numSplit[1];
 
 
         },
