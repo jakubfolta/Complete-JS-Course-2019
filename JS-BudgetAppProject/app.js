@@ -249,7 +249,7 @@ var UIController = (function() {
 
             int = numSplit[0];
             if (int.length > 3) {
-                int = int[0] + ',' + int[1, int.length - 1]
+                int = int.substr(0, 1) + ',' + int.substr(1, int.length - 1);
             }
 
             decimal = numSplit[1];
