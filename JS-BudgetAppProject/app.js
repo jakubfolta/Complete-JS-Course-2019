@@ -248,6 +248,10 @@ var UIController = (function() {
             numSplit = num.split('.');
 
             int = numSplit[0];
+            if (int.length > 3) {
+                int = int[0] + ',' + int[1, int.length - 1]
+            }
+
             decimal = numSplit[1];
 
 
