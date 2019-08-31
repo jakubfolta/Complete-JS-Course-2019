@@ -237,6 +237,15 @@ var UIController = (function() {
 
         formatNumber: function(num, type) {
 
+            // Get absolute number
+            num = Math.abs(num);
+
+            // Convert to number with 2 decimal numbers
+            num = num.toFixed(2);
+
+            // Create comma separating numbers
+
+
         },
 
         getDOMstrings: function() {
