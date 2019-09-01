@@ -264,6 +264,11 @@ var UIController = (function() {
 
         displayMonth: function() {
 
+            now = new Date();
+
+            year = now.getFullYear();
+
+
         },
 
         getDOMstrings: function() {
