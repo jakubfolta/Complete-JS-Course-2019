@@ -262,6 +262,10 @@ var UIController = (function() {
             });
         },
 
+        displayMonth: function() {
+
+        },
+
         getDOMstrings: function() {
             return DOMstrings;
         }
