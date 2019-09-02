@@ -309,6 +309,7 @@ var controller = (function(budgetCtrl, UICtrl) {
 
         document.querySelector('.container').addEventListener('click', ctrlDeleteItem);
 
+        document.querySelector(DOM.inputType).addEventListener('change', )
     };
 
     var updateBudget = function() {
