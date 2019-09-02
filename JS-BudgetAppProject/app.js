@@ -148,7 +148,8 @@ var UIController = (function() {
         expensesLabel: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage',
         container: '.container',
-        expensesPercLabel: '.item__percentage'
+        expensesPercLabel: '.item__percentage',
+        monthLabel: '.budget__title--month'
     };
 
 
@@ -267,7 +268,6 @@ var UIController = (function() {
             now = new Date();
 
             year = now.getFullYear();
-
 
         },
 
