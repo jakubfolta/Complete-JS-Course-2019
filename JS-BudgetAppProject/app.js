@@ -149,7 +149,7 @@ var UIController = (function() {
         percentageLabel: '.budget__expenses--percentage',
         container: '.container',
         expensesPercLabel: '.item__percentage',
-        monthLabel: '.budget__title--month'
+        dateLabel: '.budget__title--month'
     };
 
 
@@ -268,7 +268,7 @@ var UIController = (function() {
             now = new Date();
 
             year = now.getFullYear();
-
+            document.querySelector(DOMstrings.dateLabel).textContent = year;
         },
 
         getDOMstrings: function() {
@@ -378,6 +378,7 @@ var controller = (function(budgetCtrl, UICtrl) {
                 budget: 0,
                 percentage: -1
             });
+            UICtrl.displayMonth();
             setupEventListeners();
         }
     };
