@@ -1,9 +1,9 @@
 # Complete JS Course 2019
 
-## Check Here the "Budget app" ==> https://jakubfolta.github.io/Complete-JS-Course-2019/
+## Check Here the "Pig Game" ==> https://jakubfolta.github.io/Complete-JS-Course-2019/
 
 ## Budget App
-![Budget App](./JS-BudgetAppProject/images/budgety.png)
+![Budget App](./JS-InBrowser-PigGame/images/piggame.png)
 
 ## Technologies
 * HTML5, CSS3, JavaScript
