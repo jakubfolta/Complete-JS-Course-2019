@@ -11,8 +11,8 @@
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn.<br>
 - The first player to reach goal points on GLOBAL score wins the game.
 
-## Budget App
-![Budget App](./JS-InBrowser-PigGame/images/piggame.png)
+## Pig game
+![Pig Game](./JS-InBrowser-PigGame/images/piggame.png)
 
 ## Technologies
 * HTML5, CSS3, JavaScript
