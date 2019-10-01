@@ -31,12 +31,22 @@ driversLicence5(true);
 //ES6 
 function driversLicence6(passedTest) {
 	 
+	let firstName;
+	const year = 1990;
+	
 	if (passedTest) {
-		let firstName = 'John';
-		const year = 1990;
-
+		firstName = 'John';
 	}
 	console.log(firstName + year);
 }
 
 driversLicence6(true);
+
+
+let i = 23;
+
+for (let i = 0; i < 5; i++) {
+	console.log(i);
+}
+
+console.log(i);
