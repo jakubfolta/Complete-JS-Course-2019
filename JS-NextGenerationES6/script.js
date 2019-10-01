@@ -3,6 +3,7 @@
 /////////////////////////
 
 // ES5
+/*
 var name5 = 'Jane Smith';
 var age5 = 23;
 
@@ -55,4 +56,86 @@ console.log(i);
 /////////////////////////
 // Lecture: Blocks and IIFEs
 /////////////////////////
+
+// ES6
+
+{
+	
+	const a = 6;
+	let b = 3;
+	var c = a + b;
+	
+}
+
+console.log(c);
+*/
+
+/////////////////////////
+// Lecture: Strings
+/////////////////////////
+
+let firstName = 'John';
+let lastName = 'Smith';
+const year = 1990;
+
+function calcAge(year) {
+	return 2016 - year;
+}
+
+//ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + year + ' and he is ' + calcAge(year) + ' years old.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
