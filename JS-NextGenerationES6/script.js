@@ -82,8 +82,13 @@ function calcAge(year) {
 	return 2016 - year;
 }
 
-//ES5
+// ES5
 console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + year + ' and he is ' + calcAge(year) + ' years old.')
+
+// ES6
+
+
+
 
 
 
