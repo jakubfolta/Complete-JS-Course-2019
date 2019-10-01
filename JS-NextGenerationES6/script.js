@@ -1,5 +1,6 @@
+/////////////////////////
 // Lecture: let and const
-
+/////////////////////////
 
 // ES5
 var name5 = 'Jane Smith';
@@ -28,7 +29,7 @@ function driversLicence5(passedTest) {
 
 driversLicence5(true);
 
-//ES6 
+// ES6 
 function driversLicence6(passedTest) {
 	 
 	let firstName;
@@ -50,3 +51,8 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log(i);
+
+/////////////////////////
+// Lecture: Blocks and IIFEs
+/////////////////////////
+
