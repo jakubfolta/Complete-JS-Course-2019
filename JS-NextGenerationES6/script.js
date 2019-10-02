@@ -111,13 +111,23 @@ var ages5 = years.map(function(el) {
 console.log(ages5);
 
 //ES6
-const ages6 = years.map(el => 2019 - el);
+let ages6 = years.map(el => 2019 - el);
+
+ages6 = years.map((el, index) => `Age of ${index + 1} element:  ${2019 - el}`);
+
 console.log(ages6);
 
+ages6 = years.map((el, index) => {
+	const now = new Date().getFullYear();
+	const age = now - el;
+	return `Age of ${index + 1} element:  ${age}`;
+});
 
+console.log(ages6);
 
-
-
+/////////////////////////
+// Lecture: Arrow functions 2
+/////////////////////////
 
 
 
