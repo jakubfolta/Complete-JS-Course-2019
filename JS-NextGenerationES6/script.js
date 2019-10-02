@@ -195,6 +195,8 @@ new Person('Cass').myFriends(friends);
 // Lecture: Destructuring
 /////////////////////////
 
+
+/*
 // ES5
 var john = ['John', 26];
 //var name = john[0];
@@ -205,12 +207,36 @@ const [name, age] = john;
 console.log(name);
 console.log(age);
 
+const obj = {
+	firstName: 'John',
+	lastName: 'Smith',
+}
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+const {firstName: a, lastName: b} = obj;
+console.log(a);
+console.log(b);
+
+function calcAgeRetirement(year) {
+	const ages = new Date().getFullYear() - year;
+	return [ages, 65 - ages];
+}
+
+const [ages, retirement] = calcAgeRetirement(1990);
+
+console.log(ages);
+console.log(retirement);
+*/
 
 
+/////////////////////////
+// Lecture: Arrays
+/////////////////////////
 
-
-
-
+const boxes = document.querySelectorAll('.box');
 
 
 
