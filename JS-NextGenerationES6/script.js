@@ -251,6 +251,7 @@ boxesArr5.forEach(function(cur) {
 Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'darkgreen');
 
 // ES5
+/*
 for (var i = 0; i < boxesArr5.length; i++) {
 	
 	if (boxesArr5[i].className === 'box green') {
@@ -259,7 +260,17 @@ for (var i = 0; i < boxesArr5.length; i++) {
 	
 	boxesArr5[i].textContent = 'I changed to green';
 }
+*/
 
+// ES6
+for (const cur of boxesArr5) {
+	
+	if (cur.className.includes('green')) {
+		continue;
+	}
+	
+	cur.textContent = 'I changed to dark green.';
+}
 
 
 
