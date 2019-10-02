@@ -180,9 +180,8 @@ a.myFriends(friends);
 // ES6
 Person.prototype.myFriends = function(friends) {
 	
-	var arr = friends.map(function(el) {
-		return this.name + ' is friends with ' + el;
-	}.bind(this));
+	var arr = friends.map(el =>
+		`${this.name} is friends with ${el}`);
 	console.log(arr);
 }
 
