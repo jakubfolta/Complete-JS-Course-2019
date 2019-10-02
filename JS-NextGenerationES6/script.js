@@ -316,8 +316,18 @@ console.log(sum3);
 familySmith = ['John', 'Bob'];
 familyMiller = ['Max', 'Kelly'];
 
-bigFamily = [...familySmith, ...familyMiller];
+bigFamily = [...familySmith, 'Jane', ...familyMiller];
 console.log(bigFamily);
+
+const h = document.querySelector('h1');
+
+const boxes = document.querySelectorAll('.box');
+
+const all = [h, ...boxes];
+
+console.log(all);
+
+all.forEach(cur => cur.style.color = 'orange');
 
 
 
