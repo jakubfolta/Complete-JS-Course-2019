@@ -327,7 +327,7 @@ const all = [h, ...boxes];
 
 console.log(all);
 
-all.forEach(cur => cur.style.color = 'orange');
+Array.from(all).forEach(cur => cur.style.color = 'orange');
 
 
 
