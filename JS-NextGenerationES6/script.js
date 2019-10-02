@@ -103,6 +103,8 @@ console.log(`${firstName} `.repeat(3));
 
 
 // ES5
+
+/*
 const years = [1990, 1987, 1958, 1937];
 
 var ages5 = years.map(function(el) {
@@ -184,6 +186,14 @@ Person.prototype.myFriends = function(friends) {
 		`${this.name} is friends with ${el}`);
 	console.log(arr);
 }
+
+new Person('Cass').myFriends(friends);
+*/
+
+
+/////////////////////////
+// Lecture: Destructuring
+/////////////////////////
 
 
 
