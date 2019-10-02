@@ -239,12 +239,18 @@ console.log(retirement);
 const boxes = document.querySelectorAll('.box');
 
 // ES5
+/*
 const boxesArr5 = Array.prototype.slice.call(boxes);
 
 boxesArr5.forEach(function(cur) {
 	cur.style.backgroundColor = 'gold';
 })
+*/  
 
+// ES6
+const boxesArr6 = Array.from(boxes);
+
+boxesArr6.forEach(cur => cur.style.backgroundColor = 'green');
 
 
 
