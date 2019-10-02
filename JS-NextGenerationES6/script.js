@@ -74,6 +74,7 @@ console.log(c);
 // Lecture: Strings
 /////////////////////////
 
+/*
 let firstName = 'John';
 let lastName = 'Smith';
 const year = 1990;
@@ -86,6 +87,79 @@ function calcAge(year) {
 console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + year + ' and he is ' + calcAge(year) + ' years old.')
 
 // ES6
+ console.log(`This is ${firstName} ${lastName}. He was born in ${year}.`)
+
+const a = `${firstName} ${lastName}`;
+
+console.log(a.startsWith('f'));
+console.log(a.endsWith('h'));
+console.log(a.includes('n'));
+console.log(`${firstName} `.repeat(3));
+*/
+
+/////////////////////////
+// Lecture: Arrow functions
+/////////////////////////
+
+
+// ES5
+const years = [1990, 1987, 1958, 1937];
+
+var ages5 = years.map(function(el) {
+	return 2019 - el;
+});
+console.log(ages5);
+
+//ES6
+const ages6 = years.map(el => 2019 - el);
+console.log(ages6);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
