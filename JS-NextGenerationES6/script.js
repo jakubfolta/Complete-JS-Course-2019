@@ -126,7 +126,7 @@ ages6 = years.map((el, index) => {
 console.log(ages6);
 
 /////////////////////////
-// Lecture: Arrow functions 2
+// Lecture: Arrow functions 2 - Lexical this keyword
 /////////////////////////
 
 // ES5
@@ -157,6 +157,27 @@ var box6 = {
 	}
 }
 box6.clickMe();
+
+function Person(name) {
+	this.name = name;
+}
+
+// ES5
+Person.prototype.myFriends = function(friends) {
+	self = this;
+	var arr = friends.map(function(el) {
+		return self.name + ' is friends with ' + el;
+	})
+	console.log(arr);
+}
+
+var friends = ['Bob', 'John', 'Amy', 'Leon'];
+
+a = new Person('Jacob');
+
+a.myFriends(friends);
+
+
 
 
 
