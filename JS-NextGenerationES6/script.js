@@ -164,10 +164,10 @@ function Person(name) {
 
 // ES5
 Person.prototype.myFriends = function(friends) {
-	self = this;
+	
 	var arr = friends.map(function(el) {
-		return self.name + ' is friends with ' + el;
-	})
+		return this.name + ' is friends with ' + el;
+	}.bind(this));
 	console.log(arr);
 }
 
@@ -177,6 +177,14 @@ a = new Person('Jacob');
 
 a.myFriends(friends);
 
+// ES6
+Person.prototype.myFriends = function(friends) {
+	
+	var arr = friends.map(function(el) {
+		return this.name + ' is friends with ' + el;
+	}.bind(this));
+	console.log(arr);
+}
 
 
 
