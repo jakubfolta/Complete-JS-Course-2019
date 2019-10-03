@@ -297,6 +297,7 @@ console.log(ages.find(cur => cur >= 18));
 // Lecture: Spread operator
 /////////////////////////
 
+/*
 function addFourAges(a, b, c, d) {
 	return a + b + c + d;
 }
@@ -328,7 +329,11 @@ const all = [h, ...boxes];
 console.log(all);
 
 Array.from(all).forEach(cur => cur.style.color = 'brown');
+*/
 
+/////////////////////////
+// Lecture: Rest parameters
+/////////////////////////
 
 
 
