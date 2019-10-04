@@ -371,10 +371,12 @@ isFullAge5(21, 2009, 1965, 2015);
 
 // ES6
 function isFullAge6(limit, ...years) {
+	console.log(arguments);
+	console.log(years);
 	years.forEach(cur => console.log((new Date().getFullYear() - cur) >= limit));
 }
 
-isFullAge6(2007, 1897, 1567, 1987, 2004, 1984, 2007);
+isFullAge6(21, 2007, 1897, 1567, 1987, 2004, 1984, 2007);
 
 
 
