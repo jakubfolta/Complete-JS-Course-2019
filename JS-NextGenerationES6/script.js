@@ -335,6 +335,41 @@ Array.from(all).forEach(cur => cur.style.color = 'brown');
 // Lecture: Rest parameters
 /////////////////////////
 
+// ES5
+function isFullAge5() {
+//	console.log(arguments);
+	var arrArg = Array.prototype.slice.call(arguments);
+	arrArg.forEach(function(cur) {
+		console.log((2019 - cur) >= 18);
+	})
+} 
+
+isFullAge5(2009, 1965, 2015);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
