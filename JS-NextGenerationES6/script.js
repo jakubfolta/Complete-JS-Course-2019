@@ -355,6 +355,7 @@ function isFullAge6(...years) {
 isFullAge6(2007, 1897, 1567, 1987, 2004, 1984, 2007);
 */
 
+/*
 // ES5
 function isFullAge5(limit) {
 //	console.log(arguments);
@@ -377,6 +378,7 @@ function isFullAge6(limit, ...years) {
 }
 
 isFullAge6(21, 2007, 1897, 1567, 1987, 2004, 1984, 2007);
+*/
 
 /////////////////////////
 // Lecture: Default parameters
