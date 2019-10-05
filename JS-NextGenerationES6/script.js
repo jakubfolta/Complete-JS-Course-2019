@@ -492,7 +492,17 @@ Person6.greeting();
 // Lecture: Classes with subclasses
 /////////////////////////
 
+var Person5 = function(name,  year) {
+	this.name = name;
+	this.year = year;
+}
 
+Person5.prototype.calcAge = function() {
+	var age = new Date().getFullYear - this.year;
+	console.log(age);
+}
+
+var john5 = new Person5('John', 1997);
 
 
 
