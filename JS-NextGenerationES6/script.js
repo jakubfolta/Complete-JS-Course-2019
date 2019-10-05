@@ -424,13 +424,27 @@ question.set('correct', 4);
 question.set(true, 'Great!');
 question.set(false, 'Wrong, please try again.');
 
-question.get()
+console.log(question.get('question'));
+console.log(question.size);
 
+if (question.has(3)) {
+	question.delete(3);
+	
+}
 
+//question.clear();
 
+//question.forEach((value, key) => console.log(`This is ${key} and it's set to ${value}`));
 
+for (let [key, value] of question.entries()) {
+	if (typeof(key) === 'number'){
+	console.log(`Answer ${key}: Value ${value}`);
+	}
+}
 
+const ans = parseInt(prompt('Write the correct answer'));
 
+console.log(question.get(ans === question.get('correct')));
 
 
 
