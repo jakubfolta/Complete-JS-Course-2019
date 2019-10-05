@@ -492,21 +492,29 @@ Person6.greeting();
 // Lecture: Classes with subclasses
 /////////////////////////
 
+// ES5
 var Person5 = function(name,  year) {
 	this.name = name;
 	this.year = year;
 }
 
 Person5.prototype.calcAge = function() {
-	var age = new Date().getFullYear - this.year;
+	var age = new Date().getFullYear() - this.year;
 	console.log(age);
 }
 
 var john5 = new Person5('John', 1997);
 
+var Athlete5 = function(name, year, olympicGames, medals) {
+	
+	Person5.call(this, name, year);
+	this.olympicGames = olympicGames;
+	this.medals = medals;
+}
 
+Athlete5.prototype = Object.create(Person5.prototype);
 
-
+var johnAthlete5 = new Athlete5('John', 1976, 2, 4);
 
 
 
