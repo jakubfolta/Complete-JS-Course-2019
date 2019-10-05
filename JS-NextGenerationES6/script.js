@@ -413,8 +413,18 @@ var john = new SmithPerson('John');
 // Lecture: Maps
 /////////////////////////
 
+const question = new Map();
 
+question.set('question', 'What is the latest major JS version?');
+question.set(1, 'ES5');
+question.set(2, 'ES4');
+question.set(3, 'ES7');
+question.set(4, 'ES2015');
+question.set('correct', 4);
+question.set(true, 'Great!');
+question.set(false, 'Wrong, please try again.');
 
+question.get()
 
 
 
