@@ -514,6 +514,12 @@ var Athlete5 = function(name, year, olympicGames, medals) {
 
 Athlete5.prototype = Object.create(Person5.prototype);
 
+Athlete5.prototype.wonMedal = function() {
+	this.medals ++;
+	console.log(this.medals);
+}
+
+
 var johnAthlete5 = new Athlete5('John', 1976, 2, 4);
 
 
