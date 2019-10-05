@@ -492,6 +492,7 @@ Person6.greeting();
 // Lecture: Classes with subclasses
 /////////////////////////
 
+/*
 // ES5
 var Person5 = function(name,  year) {
 	this.name = name;
@@ -521,6 +522,7 @@ Athlete5.prototype.wonMedal = function() {
 
 
 var johnAthlete5 = new Athlete5('John', 1976, 2, 4);
+*/
 
 // ES6
 class Person6 {
@@ -541,7 +543,20 @@ class Person6 {
 
 const john = new Person6('John', 1987);
 
+class Athlete6 extends Person6 {
+	constructor (name, year, olympicGames, medals) {
+		super(name, year);
+		this.olympicGames = olympicGames;
+		this.medals = medals;
+	}
+	
+	wonMedal() {
+		this.medals++;
+		console.log(this.medals);
+	}
+}
 
+const johnAthlete6 = new Athlete6('John', 1987, 14, 23);
 
 
 
