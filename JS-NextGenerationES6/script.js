@@ -522,6 +522,25 @@ Athlete5.prototype.wonMedal = function() {
 
 var johnAthlete5 = new Athlete5('John', 1976, 2, 4);
 
+// ES6
+class Person6 {
+	constructor (name, year) {
+		this.name = name;
+		this.year = year;
+	}
+	
+	calcAge() {
+		const age = new Date().getFullYear() - this.year;
+		console.log(age);
+	}
+	
+	static greeting() {
+		console.log('Hello world ;)');
+	}
+}
+
+const john = new Person6('John', 1987);
+
 
 
 
