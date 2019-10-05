@@ -413,6 +413,7 @@ var john = new SmithPerson('John');
 // Lecture: Maps
 /////////////////////////
 
+/*
 const question = new Map();
 
 question.set('question', 'What is the latest major JS version?');
@@ -445,6 +446,11 @@ for (let [key, value] of question.entries()) {
 const ans = parseInt(prompt('Write the correct answer'));
 
 console.log(question.get(ans === question.get('correct')));
+*/
+
+/////////////////////////
+// Lecture: Classes
+/////////////////////////
 
 
 
