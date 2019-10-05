@@ -452,6 +452,7 @@ console.log(question.get(ans === question.get('correct')));
 // Lecture: Classes
 /////////////////////////
 
+/*
 // ES5
 var Person5 = function(name,  year) {
 	this.name = name;
@@ -485,6 +486,11 @@ class Person6 {
 const john = new Person6('John', 1987);
 
 Person6.greeting();
+*/
+
+/////////////////////////
+// Lecture: Classes with subclasses
+/////////////////////////
 
 
 
