@@ -384,16 +384,28 @@ isFullAge6(21, 2007, 1897, 1567, 1987, 2004, 1984, 2007);
 // Lecture: Default parameters
 /////////////////////////
 
+
+// ES5
+/*
 function SmithPerson(firstName, lastName) {
 
-	lastName = lastName === undefined ? 'Smith' : lastName;
+	lastName = lastName === undefined ? lastName = 'Smith' : lastName;
 	
 	this.firstName = firstName;
 	this.lastName = lastName;
 }
 
 var john = new SmithPerson('John');
+*/
 
+// ES6
+function SmithPerson(firstName, lastName = 'Smith') {
+	
+	this.firstName = firstName;
+	this.lastName = lastName;
+}
+
+var john = new SmithPerson('John');
 
 
 
