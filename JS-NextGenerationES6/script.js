@@ -398,6 +398,7 @@ function SmithPerson(firstName, lastName) {
 var john = new SmithPerson('John');
 */
 
+/*
 // ES6
 function SmithPerson(firstName, lastName = 'Smith') {
 	
@@ -406,6 +407,11 @@ function SmithPerson(firstName, lastName = 'Smith') {
 }
 
 var john = new SmithPerson('John');
+*/
+
+/////////////////////////
+// Lecture: Maps
+/////////////////////////
 
 
 
