@@ -595,13 +595,14 @@ class TownElement {
 	calcAge() {
 		const age = new Date().getFullYear() - this.year;
 		return age;
+	}
 }
 
 class Park extends TownElement {
 	constructor (name, year, trees, area) {
 		super (name, year);
 		this.trees = trees;
-		this.area = area; // km2
+		this.area = area; //km2
 	}
 	
 	calcTreeDensity() {
