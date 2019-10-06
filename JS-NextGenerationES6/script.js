@@ -621,24 +621,26 @@ class Street extends TownElement {
 }
 
 // Set all items inside map
-let townElements = new Map();
-townElements.set('park1', new Park('Green Park', 1987, 790, 10));
-townElements.set('park2', new Park('Oak Park', 1968, 1200, 20));
-townElements.set('park3', new Park('Revolution Park', 1948, 978, 15));
+let parks = new Map();
+parks.set('park1', new Park('Green Park', 1987, 790, 10));
+parks.set('park2', new Park('Oak Park', 1968, 1200, 20));
+parks.set('park3', new Park('Revolution Park', 1948, 978, 15));
 
-townElements.set('street1', new Street('Jones Street', 1998, 47, 'big'));
-townElements.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
-townElements.set('street3', new Street('May Street', 2006, 34));
-townElements.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
+let streets = new Map();
+streets.set('street1', new Street('Jones Street', 1998, 47, 'big'));
+streets.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
+streets.set('street3', new Street('May Street', 2006, 34));
+streets.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
 
 let averParkAge = element => {
-	let totalAge = [];
+	let totalAge = 0;
 	for (let [key, value] of element.entries()) {
 		if (key.startsWith('park')) {
-			totalAge.push(key.age);
-		}
-		console.log()
+			totalAge += value.age;
+			console.log(value.age);
+		}	
 	}
+	console.log(`Average year of each park is ${Math.floor(totalAge / element.size)}.`);
 }
 
 
