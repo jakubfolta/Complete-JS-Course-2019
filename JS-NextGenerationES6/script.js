@@ -620,6 +620,7 @@ class Street extends TownElement {
 	}
 }
 
+// Set all items inside map
 let townElements = new Map();
 townElements.set('park1', new Park('Green Park', 1987, 790, 10));
 townElements.set('park2', new Park('Oak Park', 1968, 1200, 20));
@@ -630,7 +631,15 @@ townElements.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
 townElements.set('street3', new Street('May Street', 2006, 34));
 townElements.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
 
-
+let averParkAge = element => {
+	let totalAge = [];
+	for (let [key, value] of element.entries()) {
+		if (key.startsWith('park')) {
+			totalAge.push(key.age);
+		}
+		console.log()
+	}
+}
 
 
 
