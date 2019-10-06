@@ -644,7 +644,21 @@ let averParkAge = element => {
 	console.log(`Average year of each park is ${Math.floor(totalAge / element.size)}.`);
 }
 
-let displayTreeDensity = map => console.log(map.forEach(cur => cur.calcTreeDensity()));
+// Create function to display tree density of each park
+let displayTreeDensity = map => 
+	console.log(map.forEach(cur => cur.calcTreeDensity()));
+
+// Display park which has more tha 1000 trees
+let displayMoreThan1000 = map => {
+	let parkName = [];
+	for (let [key, value] of map.entries()) {
+		if (value.trees >= 1000) {
+			parkName.push(value.name);
+		} else continue
+	}
+	console.log(`Parks which has more than 1000 trees are: ${parkName}.`)
+}
+
 
 
 
