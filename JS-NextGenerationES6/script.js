@@ -638,7 +638,6 @@ let averParkAge = element => {
 	for (let [key, value] of element.entries()) {
 		if (key.startsWith('park')) {
 			totalAge += value.age;
-			console.log(value.age);
 		}	
 	}
 	console.log(`Average year of each park is ${Math.floor(totalAge / element.size)}.`);
@@ -646,7 +645,7 @@ let averParkAge = element => {
 
 // Create function to display tree density of each park
 let displayTreeDensity = map => 
-	console.log(map.forEach(cur => cur.calcTreeDensity()));
+	map.forEach(cur => cur.calcTreeDensity());
 
 // Display park which has more tha 1000 trees
 let displayMoreThan1000 = map => {
@@ -661,6 +660,15 @@ let displayMoreThan1000 = map => {
 
 
 
+
+
+// Display annual report
+let displayReport = () => {
+	console.log('------Park Report-------');
+	averParkAge(parks);
+	displayTreeDensity(parks);
+	displayMoreThan1000(parks);
+}
 
 
 
