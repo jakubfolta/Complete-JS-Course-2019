@@ -603,21 +603,33 @@ class Park extends TownElement {
 		super (name, year);
 		this.trees = trees;
 		this.area = area; //km2
+		this.age = this.calcAge();
 	}
 	
 	calcTreeDensity() {
 		let density = this.trees / this.area;
 		console.log(`${this.name} has a density of ${density} trees per square km.`)
-	}
+	}	
 }
 
 class Street extends TownElement {
-	constructor (name, year, length, size = normal) {
+	constructor (name, year, length, size = 'normal') {
 		super (name, year);
 		this.length = length;
 		this.size = size;
 	}
 }
+
+let townElements = new Map();
+townElements.set('park1', new Park('Green Park', 1987, 790, 10));
+townElements.set('park2', new Park('Oak Park', 1968, 1200, 20));
+townElements.set('park3', new Park('Revolution Park', 1948, 978, 15));
+
+townElements.set('street1', new Street('Jones Street', 1998, 47, 'big'));
+townElements.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
+townElements.set('street3', new Street('May Street', 2006, 34));
+townElements.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
+
 
 
 
