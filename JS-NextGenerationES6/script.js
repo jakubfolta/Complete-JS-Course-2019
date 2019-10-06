@@ -632,6 +632,7 @@ streets.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
 streets.set('street3', new Street('May Street', 2006, 34));
 streets.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
 
+// Create function to check average park age
 let averParkAge = element => {
 	let totalAge = 0;
 	for (let [key, value] of element.entries()) {
@@ -642,6 +643,8 @@ let averParkAge = element => {
 	}
 	console.log(`Average year of each park is ${Math.floor(totalAge / element.size)}.`);
 }
+
+let displayTreeDensity = map => console.log(map.forEach(cur => cur.calcTreeDensity()));
 
 
 
