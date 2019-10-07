@@ -691,6 +691,7 @@ const streetsReport = () => {
 // Display annual report
 const displayReport = () => {
 	treesReport();
+	streetsReport();
 }
 
 
