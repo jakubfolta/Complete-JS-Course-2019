@@ -586,6 +586,7 @@ HINT: Use some of the ES6 features: classes, subclasses, template strings, defau
 
 */
 
+// Create class for town element and subclasses for parks and streets
 class TownElement {
 	constructor(name, year) {
 		this.name = name;
@@ -607,7 +608,7 @@ class Park extends TownElement {
 	}
 	
 	calcTreeDensity() {
-		let density = this.trees / this.area;
+		const density = this.trees / this.area;
 		console.log(`${this.name} has a density of ${density} trees per square km.`)
 	}	
 }
@@ -621,19 +622,19 @@ class Street extends TownElement {
 }
 
 // Set all items inside map
-let parks = new Map();
-parks.set('park1', new Park('Green Park', 1987, 790, 10));
+const parks = new Map();
+parks.set('park1', new Park('Green Park', 1987, 1290, 10));
 parks.set('park2', new Park('Oak Park', 1968, 1200, 20));
 parks.set('park3', new Park('Revolution Park', 1948, 978, 15));
 
-let streets = new Map();
+const streets = new Map();
 streets.set('street1', new Street('Jones Street', 1998, 47, 'big'));
 streets.set('street2', new Street('Abraham Street', 1948, 27, 'small'));
 streets.set('street3', new Street('May Street', 2006, 34));
 streets.set('street4', new Street('Roy Street', 2009, 13, 'tiny'));
 
 // Create function to check average park age
-let averParkAge = element => {
+const averParkAge = element => {
 	let totalAge = 0;
 	for (let [key, value] of element.entries()) {
 		if (key.startsWith('park')) {
@@ -644,32 +645,56 @@ let averParkAge = element => {
 }
 
 // Create function to display tree density of each park
-let displayTreeDensity = map => 
+const displayTreeDensity = map => 
 	map.forEach(cur => cur.calcTreeDensity());
 
 // Display park which has more tha 1000 trees
-let displayMoreThan1000 = map => {
-	let parkName = [];
+const displayMoreThan1000 = map => {
+	let ParkName = new Map();
+	
 	for (let [key, value] of map.entries()) {
 		if (value.trees >= 1000) {
-			parkName.push(value.name);
+			ParkName.set(value.name, value.trees);
 		} else continue
 	}
-	console.log(`Parks which has more than 1000 trees are: ${parkName}.`)
+	console.log('Parks with more than 1000 trees:');
+	for (let [key, value] of ParkName) {
+	console.log(`${key}: ${value} trees.`);
+	}
 }
+
+const treesReport = () => {
+	console.log('------Park Report-------');
+	
+	// Display average park age
+	averParkAge(parks);
+	
+	// Display tree density in each park
+	displayTreeDensity(parks);
+	
+	// Display parks with more than 1000 trees
+	displayMoreThan1000(parks);
+}
+
+const streetsReport = () => {
+	console.log('------Streets Report-------');
+	
+}
+
+
+
 
 
 
 
 
 // Display annual report
-let displayReport = () => {
-	console.log('------Park Report-------');
-	averParkAge(parks);
-	displayTreeDensity(parks);
-	displayMoreThan1000(parks);
+const displayReport = () => {
+	treesReport();
 }
 
+
+displayReport();
 
 
 
