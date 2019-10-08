@@ -671,7 +671,7 @@ const townData = (() => {
 
 		totalLength = lengths.reduce((prev, cur) => prev + cur);
 
-		return [totalLength, totalLength / lengths.length] 
+		return [totalLength, totalLength / lengths.length];
 	}
 
 	const displayStreetData = map => {
@@ -681,7 +681,7 @@ const townData = (() => {
 			console.log(`${value.name}'s size classification is: ${value.size}. `)
 		}
 
-		console.log(`Total length of all streets is ${totalLength} and average length is ${average} .`)
+		console.log(`Total length of all streets is ${totalLength}km and average length is ${average}km.`)
 	}
 
 	// REPORTS
@@ -705,69 +705,17 @@ const townData = (() => {
 		displayStreetData(streets);
 	}
 
-
-	// Display annual report
-	const displayReport = () => {
-		treesReport();
-		streetsReport();
+	return {
+		// Display annual report
+		displayReport: () => {
+			treesReport();
+			streetsReport();
+		}
 	}
 })();
 
 
-
-
-
-
-
-
-
-
-displayReport();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+townData.displayReport();
 
 
 
