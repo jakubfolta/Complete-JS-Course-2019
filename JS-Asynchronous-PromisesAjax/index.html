@@ -126,26 +126,30 @@
 			})
 		}
 		
-		const getLocation = location => {
-			fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${location}`)
-			.then(result => {
-				return result.json();
-			})
-			.then(data => {
-				console.log(data[0].woeid);
-				
-				const woeid = data.woeid;
+		const getLocation = async location => {
+			const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${location}`);
+			
+			const data = await result.json();
+			console.log(data);
+//			.then(result => {
+//				return result.json();
+//			})
+//			.then(data => {
+//				const woeid = data[0].woeid;
+//				console.log(woeid);
 //				return woeid;
-			})
-			.catch(error => {
-				console.log(`Not a valid location => error of ${error}`)
-			})
+//			})
+//			.catch(error => {
+//				console.log(`Not a valid location => error of ${error}`)
+//			})
 		}
 		
 		
 		loc = prompt('Enter location.')
 		getLocation(loc);
-//		getWeather('44418');
+//		console.log(place);
+//		console.log(woeid);
+//		getWeather(woeid);
 		
 		
 		
