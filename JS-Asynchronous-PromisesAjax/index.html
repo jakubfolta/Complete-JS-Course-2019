@@ -117,7 +117,8 @@
 			return result.json();
 		})
 		.then(data => {
-			console.log(data);
+			const tommorow = data.consolidated_weather[1];
+			console.log(`Temperature for ${tommorow.applicable_date} in ${data.title} is going to be between ${Math.floor(tommorow.min_temp)} and ${Math.floor(tommorow.max_temp)} degrees.`)
 		})
 		.catch(error => {
 			console.log(error);
