@@ -84,8 +84,19 @@
 //			console.log(error);
 //		});
 		
+		// async function always returns an promise we can consume
+		async function getRecipesAW() { 
+			const ID = await getIDs;
+			console.log(ID);
+			const recipe = await getRecipe(ID[2]);
+			console.log(recipe);
+			const related = await getRelated('John');
+			console.log(related);
+			
+			return recipe;
+		}
 		
-		
+		getRecipesAW().then(rec => console.log(rec));
 		
     </script>
 </body>
