@@ -111,18 +111,22 @@
 		////////////Ajax calls with Fetch
 		//////////////////////////////////
 		
-		fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/44418/')
-		.then(result => {
-			console.log(result);
-			return result.json();
-		})
-		.then(data => {
-			const tommorow = data.consolidated_weather[1];
-			console.log(`Temperature for ${tommorow.applicable_date} in ${data.title} is going to be between ${Math.floor(tommorow.min_temp)} and ${Math.floor(tommorow.max_temp)} degrees.`)
-		})
-		.catch(error => {
-			console.log(error);
-		})
+		const getWeather = woeid => {
+			fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location//${woeid}`)
+			.then(result => {
+				console.log(result);
+				return result.json();
+			})
+			.then(data => {
+				const tommorow = data.consolidated_weather[1];
+				console.log(`Temperature for ${tommorow.applicable_date} in ${data.title} is going to be between ${Math.floor(tommorow.min_temp)} and ${Math.floor(tommorow.max_temp)} degrees Celcius.`)
+			})
+			.catch(error => {
+				console.log(error);
+			})
+		}
+		
+		getWeather('44418');
 		
 		
     </script>
