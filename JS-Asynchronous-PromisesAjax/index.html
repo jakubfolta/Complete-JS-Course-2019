@@ -50,6 +50,15 @@
 			}, 1500)
 		})
 		
+		const getRecipe = recipeID => {
+			return newPromise( (resolve, reject) => {
+				setTimeout( ID => {
+				const recipe = {title: 'pizza', publisher: 'Q'};
+				resolve(`${ID}: ${recipe.title}`);
+				}, 1500, recipeID)
+			})
+		}
+		
 		getIDs
 		.then( IDs => {
 			console.log(IDs);
