@@ -126,15 +126,18 @@
 		}
 
 		const getLocation = async location => {
-			const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${location}`);
+			try {
+				const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${location}`);
 
-			const data = await result.json();
+				const data = await result.json();
 
-			const woeid = await data[0].woeid;
+				const woeid = await data[0].woeid;
 
-			return woeid;
+				return woeid;
+			} catch (err) {
+				console.log(`Something went wrong - error appeared: ${err}`)
+			}
 
-			await Promise.reject(new Error('Whoops!'));
 		}
 
 
