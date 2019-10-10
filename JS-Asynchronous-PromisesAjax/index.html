@@ -114,7 +114,6 @@
 		const getWeather = woeid => {
 			fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location//${woeid}`)
 			.then(result => {
-				console.log(result);
 				return result.json();
 			})
 			.then(data => {
@@ -125,33 +124,24 @@
 				console.log(error);
 			})
 		}
-		
+
 		const getLocation = async location => {
 			const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${location}`);
-			
+
 			const data = await result.json();
-			console.log(data);
-			
+
 			const woeid = await data[0].woeid;
-			
+
 			return woeid;
-//			.then(result => {
-//				return result.json();
-//			})
-//			.then(data => {
-//				const woeid = data[0].woeid;
-//				console.log(woeid);
-//				return woeid;
-//			})
-//			.catch(error => {
-//				console.log(`Not a valid location => error of ${error}`)
-//			})
+
+			await Promise.reject(new Error('Whoops!'));
 		}
-		
-		
+
+
 		const loc = prompt('Enter location.')
+
 		getLocation(loc).then(place => {getWeather(place)});
-		
+
 		
 		
 		
