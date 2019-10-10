@@ -131,6 +131,10 @@
 			
 			const data = await result.json();
 			console.log(data);
+			
+			const woeid = await data[0].woeid;
+			
+			return woeid;
 //			.then(result => {
 //				return result.json();
 //			})
@@ -145,11 +149,10 @@
 		}
 		
 		
-		loc = prompt('Enter location.')
-		getLocation(loc);
-//		console.log(place);
-//		console.log(woeid);
-//		getWeather(woeid);
+		const loc = prompt('Enter location.')
+		getLocation(loc).then(place => {getWeather(place)});
+		
+		
 		
 		
 		
