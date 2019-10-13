@@ -1,4 +1,1 @@
-import x from './test'
-const a = 32;
-
-console.log(`I imported ${x} from another module - index and a = ${a}!`);
+//36d561b9fe597511d1bb317b56c8717d
