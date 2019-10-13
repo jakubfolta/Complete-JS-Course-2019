@@ -8,7 +8,9 @@ async function getResults(query) {
 	
 	const result = await axios(`${proxy}https://www.food2fork.com/api/search?key=${key}&q=${query}`);
 	
-	console.log(result);
+	const recipes = result.data.recipes;
+	
+	console.log(recipes);
 	
 }
 
