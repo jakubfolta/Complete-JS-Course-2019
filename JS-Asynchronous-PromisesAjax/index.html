@@ -13,48 +13,48 @@
 //		   setTimeout( () => {
 //		   console.log('Bye!');
 //		   }, 2000);
-//	   } 
-//	   
+//	   }
+//
 //		const first = () => {
 //		   console.log('Hello!');
 //		   second();
 //	   }
-//	   
+//
 //		first();
-//	   
+//
 //		function getRecipe() {
 //			setTimeout( () => {
 //				const recipeID= [198, 362, 7382];
 //				console.log(recipeID);
-//				
+//
 //				setTimeout( id => {
 //					const recipe = {title: 'pizza', publisher: 'Q'};
 //					console.log(`${id}: ${recipe.title}`);
-//					
+//
 //					setTimeout( publisher => {
 //						const recipe2 = {title: 'Spaghetti', publisher: 'John'};
 //						console.log(recipe);
-//						 
+//
 //					}, 1500, recipe.publisher);
-//					
+//
 //				}, 1000, recipeID[2]);
-//				
+//
 //			}, 1500);
 //		}
-//		
+//
 //		getRecipe();
-		
-		
+
+
 		//////////////////////////////////
 		////////////Promises
 		//////////////////////////////////
-		
+
 //		const getIDs = new Promise( (resolve, reject) => {
 //			setTimeout( () => {
 //				resolve([198, 362, 7382])
 //			}, 1500)
 //		})
-//		
+//
 //		const getRecipe = recipeID => {
 //			return new Promise( (resolve, reject) => {
 //				setTimeout( ID => {
@@ -63,7 +63,7 @@
 //				}, 1500, recipeID)
 //			});
 //		}
-//		
+//
 //		const getRelated = ( publisher => {
 //			return new Promise( (resolve, reject) => {
 //				setTimeout( pub => {
@@ -72,7 +72,7 @@
 //				}, 1500, publisher)
 //			})
 //		})
-//		
+//
 //		getIDs
 //		.then( IDs => {
 //			console.log(IDs);
@@ -88,29 +88,29 @@
 //		.catch( error => {
 //			console.log(error);
 //		});
-		
+
 		//////////////////////////////////
 		////////////Async, Await
 		//////////////////////////////////
-		
+
 		// async function always returns an promise we can consume
-//		async function getRecipesAW() { 
+//		async function getRecipesAW() {
 //			const ID = await getIDs;
 //			console.log(ID);
 //			const recipe = await getRecipe(ID[2]);
 //			console.log(recipe);
 //			const related = await getRelated('John');
 //			console.log(related);
-//			
+//
 //			return recipe;
 //		}
-//		
+//
 //		getRecipesAW().then(rec => console.log(rec));
-		
+
 		//////////////////////////////////
 		////////////Ajax calls with Fetch - Weather API
 		//////////////////////////////////
-		
+
 		const getWeather = woeid => {
 			fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location//${woeid}`)
 			.then(result => {
@@ -145,29 +145,29 @@
 
 		getLocation(loc).then(place => {getWeather(place)});
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
