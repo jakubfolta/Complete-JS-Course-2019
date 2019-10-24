@@ -19,7 +19,7 @@ export class Search {
     		alert (err);
     	}
     }
-}
+};
 
 export const markHoliday = {
     bills: [770, 35, 11, 45],
@@ -44,4 +44,4 @@ export const markHoliday = {
             this.finalAmount[i] = bill + this.tips[i];
         }
     }
-}
+};
