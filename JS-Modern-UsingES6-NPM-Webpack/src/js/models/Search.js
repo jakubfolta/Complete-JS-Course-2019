@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-export class Search {
+export default class Search {
     constructor(query) {
         this.query = query;
     }
@@ -18,30 +18,5 @@ export class Search {
     	} catch (err) {
     		alert (err);
     	}
-    }
-};
-
-export const markHoliday = {
-    bills: [770, 35, 11, 45],
-    calcTip: function() {
-        this.tips = [];
-        this.finalAmount = [];
-
-        for (var i = 0; i < this.bills.length; i++) {
-
-            // Determine the value of percentage
-            var percentage;
-            var bill = this.bills[i];
-
-            if (bill < 50) {
-                percentage = .2;
-            } else if (bill >= 50 && bill < 200) {
-                percentage = .15;
-            } else {
-                percentage = .1;
-            }
-            this.tips[i] = Number((bill * percentage).toFixed(2));
-            this.finalAmount[i] = bill + this.tips[i];
-        }
     }
 };
