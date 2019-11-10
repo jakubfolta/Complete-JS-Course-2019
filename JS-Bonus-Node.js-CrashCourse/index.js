@@ -40,8 +40,8 @@ const server = http.createServer((req, res) => {
     }
 
     // Images
-    else if ((/\.(jpg|jpeg|png|gif)$/i/)).test {
-
+    else if ((/\.(jpg|jpeg|png|gif)$/i/).test(pathName)) {
+        fs.readFile(`${__dirname}/data/img${pathName}`)
     }
 
 
