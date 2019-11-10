@@ -9,11 +9,21 @@ const server = http.createServer((req, res) => {
 
     const pathName = url.parse(req.url, true).pathname;
 
-    if (pathName === 'products') {
+    if (pathName === '/products' || pathName === '') {
         res.writeHead(200, {'Content-type': 'text/html'});
         res.end('This is the Products page.');
     }
 
+    else if (pathName === '/laptop') {
+        res.writeHead(200, {'Content-type': 'text/html'});
+        res.end('This is the Laptop page.');
+    }
+
+    else {
+        res.writeHead(200, {'Content-type': 'text/html'});
+        res.end('URL was not found on the server.');
+    }
+    
 });
 
 server.listen(1337, '127.0.0.1', () => {
