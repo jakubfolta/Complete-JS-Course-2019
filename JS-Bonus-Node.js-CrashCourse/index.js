@@ -40,8 +40,11 @@ const server = http.createServer((req, res) => {
     }
 
     // Images
-    else if ((/\.(jpg|jpeg|png|gif)$/i/).test(pathName)) {
-        fs.readFile(`${__dirname}/data/img${pathName}`)
+    else if ((/\.(jpg|jpeg|png|gif)$/i).test(pathName)) {
+        fs.readFile(`${__dirname}/data/img${pathName}`, (err, data) => {
+            res.writeHead(200, {'Content-type': 'image/jpg'});
+            res.end(data);
+        });
     }
 
 
@@ -60,6 +63,7 @@ server.listen(1337, '127.0.0.1', () => {
 function replaceTemplate(originalHTML, laptop) {
     let output = originalHTML.replace(/{%PRODUCTNAME%}/g, laptop.productName);
     output = output.replace(/{%PRICE%}/g, laptop.price);
+    output = output.replace(/{%IMAGE%}/g, laptop.image);
     output = output.replace(/{%SCREEN%}/g, laptop.screen);
     output = output.replace(/{%CPU%}/g, laptop.cpu);
     output = output.replace(/{%STORAGE%}/g, laptop.storage);
